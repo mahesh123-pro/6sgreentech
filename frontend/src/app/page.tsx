@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Sparkles, MoveRight, Leaf, Shield, Zap, CircleDashed } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Home() {
   // Spring animations for maximum "wow" factor
@@ -14,19 +14,19 @@ export default function Home() {
       y: 0, 
       scale: 1, 
       rotateX: 0, 
-      transition: { type: "spring", stiffness: 50, damping: 15, mass: 1 } 
+      transition: { type: "spring" as const, stiffness: 50, damping: 15, mass: 1 } 
     }
-  };
+  } satisfies Variants;
 
   const staggerContainer = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.2 } }
-  };
+  } satisfies Variants;
 
   const charVariant = {
     hidden: { opacity: 0, y: 50, rotateY: 90 },
-    visible: { opacity: 1, y: 0, rotateY: 0, transition: { type: "spring", stiffness: 100, damping: 10 } }
-  };
+    visible: { opacity: 1, y: 0, rotateY: 0, transition: { type: "spring" as const, stiffness: 100, damping: 10 } }
+  } satisfies Variants;
 
   const titleChars = "AGRICULTURE".split("");
 
