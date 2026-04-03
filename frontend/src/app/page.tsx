@@ -80,13 +80,13 @@ export default function Home() {
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="flex flex-wrap justify-center overflow-hidden mb-6"
+            className="flex justify-center overflow-hidden mb-6 w-full"
           >
             {titleChars.map((char, index) => (
               <motion.span 
                 key={index} 
                 variants={charVariant}
-                className="text-6xl md:text-8xl lg:text-[120px] font-black tracking-tighter text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)]"
+                className="text-[10vw] sm:text-6xl md:text-8xl lg:text-[120px] font-black tracking-tighter text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)]"
               >
                 {char}
               </motion.span>
@@ -106,16 +106,16 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.8, type: "spring" }}
-            className="flex flex-col sm:flex-row gap-6"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full justify-center px-4"
           >
-            <Link href="/machines">
-              <button className="group relative px-10 py-5 bg-green-500 text-black rounded-full font-black text-lg overflow-hidden flex items-center gap-3">
+            <Link href="/machines" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto group relative px-6 py-4 md:px-10 md:py-5 bg-green-500 text-black rounded-full font-black text-base md:text-lg overflow-hidden flex items-center justify-center gap-3">
                  <div className="absolute inset-0 bg-white translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0" />
                  <span className="relative z-10 flex items-center gap-2">Explore Fleet <MoveRight className="group-hover:translate-x-2 transition-transform duration-300"/></span>
               </button>
             </Link>
-            <Link href="/about">
-              <button className="group px-10 py-5 bg-transparent border border-white/20 text-white rounded-full font-medium text-lg hover:border-white transition-all flex items-center gap-3 relative overflow-hidden">
+            <Link href="/about" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto group px-6 py-4 md:px-10 md:py-5 bg-transparent border border-white/20 text-white rounded-full font-medium text-base md:text-lg hover:border-white transition-all flex items-center justify-center gap-3 relative overflow-hidden">
                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 Play Showreel <CircleDashed className="animate-[spin_4s_linear_infinite]" size={20} />
               </button>
@@ -175,40 +175,40 @@ export default function Home() {
           >
             <Image src="/images/tech_engine.png" alt="Engine" fill className="object-cover transition-transform duration-[2s] group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/80 to-transparent z-0" />
-            <div className="absolute bottom-0 left-0 p-10 z-10">
-              <div className="w-14 h-14 bg-green-500 text-black rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(34,197,94,0.5)]">
-                <Zap size={28} />
+            <div className="absolute bottom-0 left-0 p-6 md:p-10 z-10">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-green-500 text-black rounded-2xl flex items-center justify-center mb-4 md:mb-6 shadow-[0_0_30px_rgba(34,197,94,0.5)]">
+                <Zap size={24} className="md:w-7 md:h-7" />
               </div>
-              <h3 className="text-4xl font-bold text-white mb-3">Hyper-Torque Engines</h3>
-              <p className="text-gray-300 text-lg max-w-md">Unleash thousands of pounds of torque instantly with our hybrid electric core, slicing through the toughest terrain.</p>
+              <h3 className="text-2xl md:text-4xl font-bold text-white mb-2 md:mb-3">Hyper-Torque Engines</h3>
+              <p className="text-sm md:text-lg text-gray-300 max-w-md">Unleash thousands of pounds of torque instantly with our hybrid electric core, slicing through the toughest terrain.</p>
             </div>
           </motion.div>
 
           {/* Bento Box 2 */}
           <motion.div 
              variants={springVariant}
-             className="md:col-span-4 bg-[#111] rounded-[40px] p-10 flex flex-col justify-between border border-white/10 group hover:bg-[#151515] transition-colors"
+             className="md:col-span-4 bg-[#111] rounded-[40px] p-6 md:p-10 flex flex-col justify-between border border-white/10 group hover:bg-[#151515] transition-colors"
           >
             <div>
-               <div className="flex justify-between items-start mb-8">
-                  <Shield size={40} className="text-green-400" />
+               <div className="flex justify-between items-start mb-6 md:mb-8">
+                  <Shield size={32} className="text-green-400 md:w-10 md:h-10" />
                   <span className="text-xs font-bold px-3 py-1 bg-white/10 rounded-full text-green-300">Protected</span>
                </div>
-               <h3 className="text-3xl font-bold text-white mb-4">Carbon Armor</h3>
-               <p className="text-gray-400">Lightweight but impenetrable. Extensively tested in extreme weather to guarantee zero rust.</p>
+               <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 md:mb-4">Carbon Armor</h3>
+               <p className="text-sm md:text-base text-gray-400">Lightweight but impenetrable. Extensively tested in extreme weather to guarantee zero rust.</p>
             </div>
           </motion.div>
 
           {/* Bento Box 3 */}
           <motion.div 
              variants={springVariant}
-             className="md:col-span-4 bg-[#111] rounded-[40px] p-10 flex flex-col justify-end border border-white/10 group hover:border-green-500/50 transition-colors relative overflow-hidden"
+             className="md:col-span-4 bg-[#111] rounded-[40px] p-6 md:p-10 flex flex-col justify-end border border-white/10 group hover:border-green-500/50 transition-colors relative overflow-hidden"
           >
              <div className="absolute -right-10 -top-10 text-white/5 group-hover:text-green-500/10 transition-colors duration-500">
-                <Leaf size={200} />
+                <Leaf size={150} className="md:w-[200px] md:h-[200px]" />
              </div>
-             <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Zero Emissions</h3>
-             <p className="text-gray-400 relative z-10">Fully electric models available. Harvest the land while saving the Earth.</p>
+             <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 md:mb-4 relative z-10">Zero Emissions</h3>
+             <p className="text-sm md:text-base text-gray-400 relative z-10">Fully electric models available. Harvest the land while saving the Earth.</p>
           </motion.div>
 
            {/* Bento Box 4 */}
@@ -219,13 +219,13 @@ export default function Home() {
             <Image src="/images/tech_drone.png" alt="Drone" fill className="object-cover transition-transform duration-[2s] group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/80 to-[#0A0A0A]/40 z-0" />
             <div className="absolute inset-0 bg-green-500 opacity-0 group-hover:opacity-20 mix-blend-overlay transition-opacity duration-1000 z-0" />
-            <div className="absolute bottom-0 left-0 p-10 z-10 w-full flex justify-between items-end">
+            <div className="absolute bottom-0 left-0 p-6 md:p-10 z-10 w-full flex flex-col sm:flex-row sm:justify-between items-start sm:items-end gap-4">
               <div>
-                <h3 className="text-4xl font-bold text-white mb-3">Aerial Intelligence</h3>
-                <p className="text-gray-300 text-lg max-w-sm">Scan topography and moisture levels daily with autonomous drones.</p>
+                <h3 className="text-2xl md:text-4xl font-bold text-white mb-2 md:mb-3">Aerial Intelligence</h3>
+                <p className="text-sm md:text-lg text-gray-300 max-w-sm">Scan topography and moisture levels daily with autonomous drones.</p>
               </div>
-              <button className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center transform group-hover:scale-110 transition-transform shadow-[0_0_30px_rgba(255,255,255,0.3)]">
-                 <ArrowRight size={24} />
+              <button className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white text-black flex items-center justify-center transform group-hover:scale-110 transition-transform shadow-[0_0_30px_rgba(255,255,255,0.3)] shrink-0 self-end sm:self-auto">
+                 <ArrowRight size={20} className="md:w-6 md:h-6" />
               </button>
             </div>
           </motion.div>
@@ -285,13 +285,13 @@ export default function Home() {
            {/* Glow Effect */}
            <div className="absolute inset-0 bg-green-500 blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-1000"></div>
            
-           <h2 className="relative z-10 text-6xl md:text-[100px] font-black tracking-tighter text-white mb-10 leading-none">
+           <h2 className="relative z-10 text-[12vw] sm:text-6xl md:text-[100px] font-black tracking-tighter text-white mb-8 md:mb-10 leading-none break-words">
              START <br className="md:hidden"/>
              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-600">COMMANDING.</span>
            </h2>
            
-           <Link href="/login?tab=register">
-             <button className="relative z-10 px-12 py-6 bg-white text-black rounded-full font-black text-xl md:text-2xl hover:scale-110 transition-transform duration-300 shadow-[0_0_50px_rgba(255,255,255,0.2)]">
+           <Link href="/login?tab=register" className="w-full sm:w-auto inline-block">
+             <button className="relative z-10 px-8 py-4 w-full sm:w-auto md:px-12 md:py-6 bg-white text-black rounded-full font-black text-base sm:text-xl md:text-2xl hover:scale-110 transition-transform duration-300 shadow-[0_0_50px_rgba(255,255,255,0.2)]">
                BECOME A PARTNER
              </button>
            </Link>

@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`relative flex justify-between items-center bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg rounded-2xl transition-all duration-300 ${scrolled ? 'h-16 px-6 shadow-xl' : 'h-20 px-8'}`}>
+        <div className={`relative flex justify-between items-center bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg rounded-2xl transition-all duration-300 ${scrolled ? 'h-16 px-4 md:px-6 shadow-xl' : 'h-20 px-4 md:px-8'}`}>
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
@@ -64,12 +64,12 @@ export default function Navbar() {
               </>
             ) : (
               <>
-                <Link href="/login" className="text-sm font-bold text-gray-600 hover:text-gray-900 px-5 py-2.5 rounded-xl hover:bg-gray-100 transition-all">
+                <Link href="/login" className="text-sm font-bold text-gray-600 hover:text-gray-900 px-3 md:px-5 py-2 md:py-2.5 rounded-xl hover:bg-gray-100 transition-all whitespace-nowrap">
                   Log in
                 </Link>
-                <Link href="/login?tab=register" className="group flex items-center gap-1 text-sm font-bold bg-green-600 text-white hover:bg-green-700 px-6 py-2.5 rounded-xl shadow-lg shadow-green-600/30 transition-all hover:shadow-green-600/50 hover:-translate-y-0.5">
-                  Sign up
-                  <ChevronRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
+                <Link href="/login?tab=register" className="group flex items-center gap-1 text-sm font-bold bg-green-600 text-white hover:bg-green-700 px-4 md:px-6 py-2 md:py-2.5 rounded-xl shadow-lg shadow-green-600/30 transition-all hover:shadow-green-600/50 hover:-translate-y-0.5 whitespace-nowrap">
+                  <span>Sign up</span>
+                  <ChevronRight size={16} className="transform group-hover:translate-x-1 transition-transform hidden sm:block" />
                 </Link>
               </>
             )}
