@@ -12,7 +12,7 @@ export default function Footer() {
                 <Tractor size={24} />
               </div>
               <span className="text-white font-black text-2xl tracking-tighter uppercase">
-                6S GreenTech
+                6S Green Tech
               </span>
             </Link>
             <p className="text-gray-400 text-lg max-w-sm leading-relaxed">
@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-medium">
-          <p>© {new Date().getFullYear()} 6S GREENTECH. ENGINEERED FOR GROWTH.</p>
+          <p>© {new Date().getFullYear()} 6S GREEN TECH. ENGINEERED FOR GROWTH.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white transition-colors">PRIVACY POLICY</a>
             <a href="#" className="hover:text-white transition-colors">TERMS OF SERVICE</a>

@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "6S GreenTech | Modern Agricultural Machinery",
-  description: "Discover modern farming machinery, view realistic visuals, and show interest in high-quality tractors, harvesters, and irrigation systems.",
-  keywords: "agriculture, farming machinery, tractors, harvesters, irrigation systems, modern farming, 6S GreenTech",
+  title: "6S Green Tech | Manufacturing & Supply of Agricultural Machinery",
+  description: "Manufacturing and supply of high-quality agricultural machinery including Rotavators, Threshers, Ploughs, Chaff Cutters, and Seed Processing Machines.",
+  keywords: "agriculture, farming machinery, rotavator, thresher, plough, chaff cutter, seed processing machine, 6S Green Tech",
 };
 
 export default function RootLayout({

@@ -349,7 +349,7 @@ export default function Home() {
                      </div>
                      <div>
                         <span className="text-sm text-gray-500 uppercase font-bold tracking-widest">Email Us</span>
-                        <p className="text-xl font-bold">contact@6sgreentech.com</p>
+                        <p className="text-xl font-bold">gopalvenu095@gmail.com</p>
                      </div>
                   </div>
                   <div className="flex items-center gap-6 group">
@@ -358,16 +358,17 @@ export default function Home() {
                      </div>
                      <div>
                         <span className="text-sm text-gray-500 uppercase font-bold tracking-widest">Call Us</span>
-                        <p className="text-xl font-bold">+91 98765 43210</p>
+                        <p className="text-xl font-bold">+91 73380 62746</p>
+                        <p className="text-sm text-gray-500">K. Venu Gopal</p>
                      </div>
                   </div>
                   <div className="flex items-center gap-6 group">
-                     <div className="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center group-hover:bg-green-500 group-hover:text-black transition-all">
+                     <div className="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center group-hover:bg-green-500 group-hover:text-black transition-all shrink-0">
                         <MapPin size={28} />
                      </div>
                      <div>
                         <span className="text-sm text-gray-500 uppercase font-bold tracking-widest">Visit Us</span>
-                        <p className="text-xl font-bold">Innovation Hub, Agritech Park, Hyderabad</p>
+                        <p className="text-xl font-bold text-wrap break-words max-w-sm">Vinayaka Layout, Bypass Road, Gauribidanur – 561208, Karnataka, India</p>
                      </div>
                   </div>
                </div>
@@ -417,7 +418,7 @@ export default function Home() {
             </button>
          </Link>
          <div className="mt-20 pt-10 border-t border-black/10 w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-4">
-            <span className="font-bold">© 2026 6S GREENTECH. ALL RIGHTS RESERVED.</span>
+            <span className="font-bold">© 2026 6S GREEN TECH. ALL RIGHTS RESERVED.</span>
             <div className="flex gap-8 font-bold">
                <a href="#" className="hover:underline">PRIVACY</a>
                <a href="#" className="hover:underline">TERMS</a>

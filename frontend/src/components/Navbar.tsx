@@ -28,7 +28,7 @@ export default function Navbar() {
               <Tractor size={24} />
             </div>
             <span className="text-gray-900 font-extrabold text-2xl tracking-tight hidden sm:block">
-              6S GreenTech
+              6S Green Tech
             </span>
           </Link>
 
