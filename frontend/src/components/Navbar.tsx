@@ -33,11 +33,14 @@ export default function Navbar() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex gap-8 items-center hidden md:flex">
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/machines">Machinery</NavLink>
-            <NavLink href="/technology">Technology</NavLink>
-            <NavLink href="/about">About Us</NavLink>
+          <div className="flex gap-4 lg:gap-8 items-center hidden md:flex overflow-x-auto no-scrollbar">
+            <NavLink href="/#intro">Intro</NavLink>
+            <NavLink href="/#thresher">Thresher</NavLink>
+            <NavLink href="/#shredder">Shredder</NavLink>
+            <NavLink href="/#chaff-cutter">Chaff Cutter</NavLink>
+            <NavLink href="/#rotovator">Rotovator</NavLink>
+            <NavLink href="/#all-implements">All Implements</NavLink>
+            <NavLink href="/#contact">Contact Us</NavLink>
           </div>
 
           {/* Auth Actions */}
