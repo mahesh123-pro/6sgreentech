@@ -44,7 +44,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/60 z-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent z-10" />
           <Image
-            src="/images/img1.jpeg"
+            src="/images/tractor_main.png"
             alt="Hero Background"
             fill
             className="object-cover object-center"
