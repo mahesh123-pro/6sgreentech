@@ -178,7 +178,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="relative h-[400px] lg:h-[600px] rounded-[40px] overflow-hidden order-1 lg:order-2 group"
           >
-            <Image src="/images/img2.jpeg" alt="Thresher" fill className="object-cover group-hover:scale-110 transition-transform duration-[3s]" />
+            <Image src="/images/real_blue_thresher.png" alt="Thresher" fill className="object-cover group-hover:scale-110 transition-transform duration-[3s]" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </motion.div>
         </div>
@@ -194,7 +194,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="relative h-[400px] lg:h-[600px] rounded-[40px] overflow-hidden group"
           >
-            <Image src="/images/img3.jpeg" alt="Shredder" fill className="object-cover group-hover:scale-110 transition-transform duration-[3s]" />
+            <Image src="/images/real_blue_machine.png" alt="Shredder" fill className="object-cover group-hover:scale-110 transition-transform duration-[3s]" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </motion.div>
           <motion.div 
@@ -246,7 +246,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="relative h-[400px] lg:h-[600px] rounded-[40px] overflow-hidden order-1 lg:order-2 group bg-[#111] p-8 border border-white/5"
           >
-            <Image src="/images/img4.jpeg" alt="Chaff Cutter" fill className="object-contain p-12 group-hover:scale-105 transition-transform duration-700" />
+            <Image src="/images/real_yellow_cutter.png" alt="Chaff Cutter" fill className="object-contain p-12 group-hover:scale-105 transition-transform duration-700" />
             <div className="absolute top-10 right-10 bg-green-500/20 backdrop-blur-md px-4 py-2 rounded-full border border-green-500/30">
                <span className="text-green-400 text-sm font-bold">New Gen 4.0</span>
             </div>
@@ -264,7 +264,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="relative h-[400px] lg:h-[600px] rounded-[40px] overflow-hidden group"
           >
-            <Image src="/images/img5.jpeg" alt="Rotovator" fill className="object-cover group-hover:scale-110 transition-transform duration-[3s]" />
+            <Image src="/images/real_rotavator.png" alt="Rotovator" fill className="object-cover group-hover:scale-110 transition-transform duration-[3s]" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </motion.div>
           <motion.div 
@@ -310,10 +310,10 @@ export default function Home() {
          
          <div className="flex flex-col md:flex-row h-[700px] gap-2 px-4 max-w-[100vw] overflow-hidden">
             {[
-               { title: 'TRACTORS', img: '/images/img6.jpeg', cat: 'Tractors' },
-               { title: 'HARVESTERS', img: '/images/img7.jpeg', cat: 'Harvesters' },
-               { title: 'PRECISION AG', img: '/images/img8.jpeg', cat: 'Technology' },
-               { title: 'IRRIGATION', img: '/images/img9.jpeg', cat: 'Irrigation' }
+               { title: 'TRACTOR PLOUGH', img: '/images/real_plough.png', cat: 'Tractors' },
+               { title: 'MULTI THRESHER', img: '/images/real_red_thresher.png', cat: 'Harvesters' },
+               { title: 'CHAFF CUTTERS', img: '/images/real_yellow_cutter.png', cat: 'Technology' },
+               { title: 'ROTOVATORS', img: '/images/real_rotavator.png', cat: 'Irrigation' }
             ].map((item, idx) => (
                <Link key={idx} href={`/machines?category=${item.cat}`} className="relative flex-1 md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-[40px] overflow-hidden group">
                   <Image src={item.img} fill className="object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000" alt={item.title} />

@@ -28,15 +28,9 @@ export default function AboutUs() {
           initial={{ y: -50, scale: 1.05 }}
           animate={{ y: 0, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute inset-0"
+          className="absolute inset-0 bg-black"
         >
-          <Image
-            src="/images/farmer_about.png"
-            alt="Beautiful vast farming lands"
-            fill
-            className="object-cover object-bottom"
-            priority
-          />
+          <Image src="/images/about_hero.png" alt="Agriculture Machinery" fill className="object-cover opacity-70" priority />
         </motion.div>
 
         <motion.div 
@@ -86,12 +80,7 @@ export default function AboutUs() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="lg:w-1/2 w-full relative h-[500px] rounded-3xl overflow-hidden shadow-2xl"
             >
-              <Image 
-                src="/images/tractor_main.png"
-                alt="Farmer looking at sunset"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
-              />
+              <Image src="/images/farmer_about.png" alt="Sustainable Machinery" fill className="object-cover" />
             </motion.div>
           </div>
         </div>
@@ -100,7 +89,7 @@ export default function AboutUs() {
       {/* Stats with Images */}
       <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-          <Image src="/images/irrigation.png" alt="texture" fill className="object-cover" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-green-900/20 via-black to-black" />
         </div>
         <motion.div 
           initial="hidden"
@@ -157,12 +146,7 @@ export default function AboutUs() {
             {/* Show 1 */}
             <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center gap-12 group">
               <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-xl h-[400px] relative">
-                <Image 
-                  src="/images/tech_engine.png" 
-                  alt="Tractor inside component" 
-                  fill 
-                  className="object-cover group-hover:scale-110 transition-transform duration-700" 
-                />
+                <Image src="/images/tech_engine.png" alt="Precision Engine" fill className="object-cover" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Precision Engines</h3>
@@ -175,12 +159,7 @@ export default function AboutUs() {
             {/* Show 2 */}
             <motion.div variants={fadeUp} className="flex flex-col md:flex-row-reverse items-center gap-12 group">
               <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-xl h-[400px] relative">
-                <Image 
-                  src="/images/tech_drone.png" 
-                  alt="High tech agriculture field" 
-                  fill 
-                  className="object-cover group-hover:scale-110 transition-transform duration-700" 
-                />
+                <Image src="/images/autonomous_tractor.png" alt="Autonomous Cultivation" fill className="object-cover" />
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Smart Autonomous Cultivation</h3>
