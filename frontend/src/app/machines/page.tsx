@@ -7,27 +7,16 @@ import Link from 'next/link';
 // I will include mock data as a fallback to ensure the demo is always beautiful and working.
 
 const mockMachines = [
-  { _id: '1', name: 'John Deere 8RX', category: 'Tractors', price: 320000, images: ['/images/tractor_main.png'], specs: { power: '410 hp', usage: 'Heavy plowing' } },
-  { _id: '2', name: 'Case IH Axial-Flow', category: 'Harvesters', price: 450000, images: ['/images/harvester.png'], specs: { power: '550 hp', usage: 'Wheat, Corn harvesting' } },
-  { _id: '3', name: 'Valley Center Pivot', category: 'Irrigation', price: 150000, images: ['/images/irrigation.png'], specs: { power: 'Electric 480V', usage: 'Large scale watering' } },
-  { _id: '4', name: 'Massey Ferguson 8S', category: 'Tractors', price: 210000, images: ['/images/tractor_side.png'], specs: { power: '265 hp', usage: 'General farm work' } },
+  { _id: '1', name: 'John Deere 8RX', category: 'Tractors', price: 320000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg'], specs: { power: '410 hp', usage: 'Heavy plowing' } },
+  { _id: '2', name: 'Case IH Axial-Flow', category: 'Harvesters', price: 450000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg'], specs: { power: '550 hp', usage: 'Wheat, Corn harvesting' } },
+  { _id: '3', name: 'Valley Center Pivot', category: 'Irrigation', price: 150000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.47 AM.jpeg'], specs: { power: 'Electric 480V', usage: 'Large scale watering' } },
+  { _id: '4', name: 'Massey Ferguson 8S', category: 'Tractors', price: 210000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.46 AM (1).jpeg'], specs: { power: '265 hp', usage: 'General farm work' } },
 ];
 
 export default function MachineryListing() {
   const [machines, setMachines] = useState(mockMachines);
   const [category, setCategory] = useState('');
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Attempt to fetch from backend
-    fetch('http://localhost:5000/api/machines')
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.length > 0) setMachines(data);
-      })
-      .catch(console.error)
-      .finally(() => setLoading(false));
-  }, []);
 
   const filteredMachines = category ? machines.filter(m => m.category === category) : machines;
 
@@ -54,13 +43,15 @@ export default function MachineryListing() {
         {filteredMachines.map(machine => (
           <Link href={`/machines/${machine._id}`} key={machine._id} className="group">
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full">
-              <div className="relative h-48 w-full bg-gray-100">
-                <Image 
-                  src={machine.images[0] || '/images/tractor_main.png'} 
-                  alt={machine.name}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+              <div className="relative h-48 w-full bg-gray-200">
+                {machine.images?.[0] && (
+                  <Image 
+                    src={machine.images[0]} 
+                    alt={machine.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                )}
               </div>
               <div className="p-5 flex flex-col flex-grow">
                 <span className="text-xs font-semibold text-green-600 bg-green-50 w-fit px-2 py-1 rounded mb-2">{machine.category}</span>

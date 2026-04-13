@@ -28,9 +28,15 @@ export default function AboutUs() {
           initial={{ y: -50, scale: 1.05 }}
           animate={{ y: 0, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute inset-0 bg-black"
+          className="absolute inset-0 bg-black overflow-hidden"
         >
-          <Image src="/images/about_hero.png" alt="Agriculture Machinery" fill className="object-cover opacity-70" priority />
+          <motion.div
+            animate={{ scale: [1, 1.08, 1], x: [0, -10, 0] }}
+            transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image src="/images/WhatsApp Image 2026-04-09 at 11.50.47 AM.jpeg" alt="Agriculture Machinery" fill className="object-cover opacity-70" priority />
+          </motion.div>
         </motion.div>
 
         <motion.div 
@@ -78,9 +84,10 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:w-1/2 w-full relative h-[500px] rounded-3xl overflow-hidden shadow-2xl"
+              className="lg:w-1/2 w-full relative h-[500px] rounded-3xl overflow-hidden shadow-2xl bg-gray-200 group"
             >
-              <Image src="/images/farmer_about.png" alt="Sustainable Machinery" fill className="object-cover" />
+              <Image src="/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg" alt="Sustainable Machinery" fill className="object-cover group-hover:scale-110 transition-transform duration-[2.5s] ease-out" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </motion.div>
           </div>
         </div>
@@ -145,8 +152,10 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 space-y-24">
             {/* Show 1 */}
             <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center gap-12 group">
-              <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-xl h-[400px] relative">
-                <Image src="/images/tech_engine.png" alt="Precision Engine" fill className="object-cover" />
+              <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-xl h-[400px] relative bg-gray-200 group">
+                <motion.div animate={{ y: [-5, 5, -5] }} transition={{ duration: 6, ease: "easeInOut", repeat: Infinity }} className="absolute md:inset-[-5%] inset-0">
+                  <Image src="/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg" alt="Precision Engine" fill className="object-cover group-hover:scale-105 transition-transform duration-[2s]" />
+                </motion.div>
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Precision Engines</h3>
@@ -158,8 +167,10 @@ export default function AboutUs() {
             
             {/* Show 2 */}
             <motion.div variants={fadeUp} className="flex flex-col md:flex-row-reverse items-center gap-12 group">
-              <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-xl h-[400px] relative">
-                <Image src="/images/autonomous_tractor.png" alt="Autonomous Cultivation" fill className="object-cover" />
+              <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-xl h-[400px] relative bg-gray-200 group">
+                <motion.div animate={{ y: [5, -5, 5] }} transition={{ duration: 7, ease: "easeInOut", repeat: Infinity }} className="absolute md:inset-[-5%] inset-0">
+                  <Image src="/images/WhatsApp Image 2026-04-09 at 11.50.45 AM (1).jpeg" alt="Autonomous Cultivation" fill className="object-cover group-hover:scale-105 transition-transform duration-[2s]" />
+                </motion.div>
               </div>
               <div className="md:w-1/2">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Smart Autonomous Cultivation</h3>

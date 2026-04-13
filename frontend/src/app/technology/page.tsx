@@ -38,7 +38,7 @@ export default function TechnologyPage() {
       <ParallaxSection 
         title="Autonomous Neural Drive"
         desc="Our proprietary AI core allows vehicles to autonomously map, navigate, and harvest entirely unassisted. Deep learning algorithms adapt to soil conditions and weather events in real-time, operating 24/7 without fatigue."
-        imageSrc="/images/autonomous_tractor.png"
+        imageSrc="/images/WhatsApp Image 2026-04-09 at 11.50.46 AM (1).jpeg"
         icon={<Cpu size={40} className="text-green-400" />}
         align="left"
       />
@@ -47,7 +47,7 @@ export default function TechnologyPage() {
       <ParallaxSection 
         title="Micro-Precision Sensors"
         desc="At the heart of every machine lies a dense network of glowing data nodes. Scanning foliage health, moisture latency, and nitrogen levels cell by cell, we guarantee every drop of water and inch of fertilizer is perfectly deployed."
-        imageSrc="/images/precision_ag.png"
+        imageSrc="/images/WhatsApp Image 2026-04-09 at 11.50.46 AM (2).jpeg"
         icon={<Satellite size={40} className="text-blue-400" />}
         align="right"
       />
@@ -56,7 +56,7 @@ export default function TechnologyPage() {
       <ParallaxSection 
         title="Aerial Fleet Coordination"
         desc="A symphony in the sky. Swarms of intelligent drones fly in seamless formation to execute aerial seeding, hyper-targeted spraying, and thermal topology scans, streaming 8k agricultural data directly to your dashboard."
-        imageSrc="/images/drone_fleet.png"
+        imageSrc="/images/futuristic_drone_hero.png"
         icon={<ShieldCheck size={40} className="text-yellow-400" />}
         align="left"
       />
@@ -65,7 +65,7 @@ export default function TechnologyPage() {
       <ParallaxSection 
         title="Total Ecosystem Harmony"
         desc="High-yield farming no longer costs the earth. By pairing fully electric powertrains with our precision ecosystem, we dramatically slash carbon output, paving the way for complete agricultural sustainability."
-        imageSrc="/images/sustainability.png"
+        imageSrc="/images/WhatsApp Image 2026-04-09 at 11.50.47 AM (1).jpeg"
         icon={<Wind size={40} className="text-teal-400" />}
         align="right"
       />
@@ -112,15 +112,23 @@ function ParallaxSection({ title, desc, imageSrc, icon, align }: { title: string
         </motion.div>
 
         {/* Image Block with Parallax */}
-        <div className="lg:w-7/12 w-full h-[50vh] lg:h-[80vh] relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+        <div className="lg:w-7/12 w-full h-[50vh] lg:h-[80vh] relative rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group bg-neutral-800">
           <motion.div style={{ y }} className="absolute inset-[-10%] w-[120%] h-[120%]">
-            <Image 
-              src={imageSrc} 
-              alt={title} 
-              fill 
-              className="object-cover group-hover:scale-105 transition-transform duration-[2s]" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+            {imageSrc && (
+              <motion.div
+                animate={{ scale: [1, 1.05, 1], rotate: [0, 0.5, -0.5, 0] }}
+                transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute inset-0"
+              >
+                <Image 
+                  src={imageSrc} 
+                  alt={title} 
+                  fill 
+                  className="object-cover group-hover:scale-110 transition-transform duration-[1.5s]" 
+                />
+              </motion.div>
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none" />
           </motion.div>
         </div>
 
