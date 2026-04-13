@@ -205,13 +205,13 @@ export default function Home() {
                       scale: 1.05, 
                       rotateX: idx % 2 === 0 ? 3 : -3,
                       rotateY: idx % 3 === 0 ? 3 : -3,
-                      boxShadow: "0px 30px 60px rgba(34, 197, 94, 0.4)" 
+                      boxShadow: "0px 30px 60px rgba(34, 197, 94, 0.4)",
+                      transition: { type: "spring", stiffness: 150, damping: 15 }
                    }}
                    viewport={{ once: true, margin: "-100px" }}
                    transition={{ 
                       opacity: { duration: 1 },
-                      y: { duration: 1, ease: "easeOut" },
-                      whileHover: { type: "spring", stiffness: 150, damping: 15 }
+                      y: { duration: 1, ease: "easeOut" }
                    }}
                    className="relative h-[450px] rounded-[40px] overflow-hidden group border border-white/10 bg-[#111]"
                 >
