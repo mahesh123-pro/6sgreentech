@@ -99,14 +99,14 @@ export default function Home() {
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="flex flex-wrap justify-center gap-x-2 mb-8"
+            className="flex flex-nowrap justify-center items-baseline mb-8 w-full"
           >
             {titleChars.map((char, index) => (
               <motion.span 
                 key={index} 
                 variants={charVariant}
                 whileHover={{ scale: 1.1, y: -10, color: index < 2 ? "#4ade80" : "#fff" }}
-                className={`text-[13vw] sm:text-7xl md:text-8xl lg:text-[130px] font-black tracking-tighter cursor-default ${index < 2 ? 'text-green-500' : 'text-white'} drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]`}
+                className={`text-[8.2vw] sm:text-7xl md:text-8xl lg:text-[130px] font-black tracking-tighter cursor-default ${index < 2 ? 'text-green-500' : 'text-white'} drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]`}
               >
                 {char === " " ? "\u00A0" : char}
               </motion.span>
