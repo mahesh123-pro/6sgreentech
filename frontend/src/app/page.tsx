@@ -106,7 +106,7 @@ export default function Home() {
                 key={index} 
                 variants={charVariant}
                 whileHover={{ scale: 1.1, y: -10, color: index < 2 ? "#4ade80" : "#fff" }}
-                className={`text-[12vw] sm:text-7xl md:text-8xl lg:text-[130px] font-black tracking-tighter cursor-default ${index < 2 ? 'text-green-500' : 'text-white'} drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]`}
+                className={`text-[13vw] sm:text-7xl md:text-8xl lg:text-[130px] font-black tracking-tighter cursor-default ${index < 2 ? 'text-green-500' : 'text-white'} drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]`}
               >
                 {char === " " ? "\u00A0" : char}
               </motion.span>
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* 2. INFINITE MARQUEE */}
-      <div className="relative py-10 bg-green-500 overflow-hidden flex whitespace-nowrap -rotate-2 transform scale-110 z-30 shadow-[0_0_50px_rgba(34,197,94,0.3)]">
+      <div className="relative py-6 md:py-10 bg-green-500 overflow-hidden flex whitespace-nowrap -rotate-2 transform scale-110 z-30 shadow-[0_0_50px_rgba(34,197,94,0.3)]">
         <motion.div 
           animate={{ x: [0, -1000] }}
           transition={{ duration: 15, ease: "linear", repeat: Infinity }}
@@ -181,7 +181,7 @@ export default function Home() {
              </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
              {[
                { name: "Unit S-TX 400", img: "WhatsApp Image 2026-04-06 at 9.56.24 PM.jpeg" },
                { name: "Neural Plough v2", img: "WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg" },
@@ -340,14 +340,14 @@ export default function Home() {
             </motion.div>
          </div>
          
-         <div className="flex flex-col md:flex-row h-[700px] gap-2 px-4 max-w-[100vw] overflow-hidden">
+         <div className="flex flex-col md:flex-row h-auto md:h-[700px] gap-2 px-4 max-w-[100vw] overflow-hidden">
             {[
                { title: 'TRACTOR PLOUGH', img: '/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg', cat: 'Tractors' },
                { title: 'MULTI THRESHER', img: '/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg', cat: 'Harvesters' },
                { title: 'CHAFF CUTTERS', img: '/images/WhatsApp Image 2026-04-09 at 11.50.47 AM.jpeg', cat: 'Technology' },
                { title: 'ROTOVATORS', img: '/images/WhatsApp Image 2026-04-09 at 11.50.46 AM (1).jpeg', cat: 'Irrigation' }
             ].map((item, idx) => (
-               <Link key={idx} href={`/machines?category=${item.cat}`} className="relative flex-1 md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-[40px] overflow-hidden group">
+               <Link key={idx} href={`/machines?category=${item.cat}`} className="relative h-[400px] md:h-full flex-1 md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-[40px] overflow-hidden group">
                   <Image src={item.img} fill className="object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000" alt={item.title} />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent z-10" />
                   <div className="absolute bottom-12 left-12 opacity-100 md:opacity-0 md:-translate-x-10 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700 delay-100 z-20">
