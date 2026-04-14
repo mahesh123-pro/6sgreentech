@@ -42,22 +42,7 @@ export default function Home() {
           transition={{ duration: 3, ease: "easeOut" }}
           className="absolute inset-0 z-0"
         >
-          <motion.div 
-            animate={{ scale: [1, 1.03, 1], x: [-10, 10, -10] }} 
-            transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }} 
-            className="absolute inset-0"
-          >
-            <Image
-              src="/images/futuristic_tractor_hero.png"
-              alt="Hero Background"
-              fill
-              className="object-cover object-center opacity-40 mix-blend-lighten scale-110"
-              priority
-            />
-          </motion.div>
-          
-          {/* Pulsing Grid Overlay */}
-          <div className="absolute inset-0 bg-[url('https://grain-y.com/wp-content/uploads/2023/10/grid.png')] opacity-20 invert mix-blend-overlay pointer-events-none" />
+          {/* Background image and grid removed */}
           
           {/* Overlays */}
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-10" />
@@ -183,18 +168,18 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
              {[
-               { name: "Unit S-TX 400", img: "WhatsApp Image 2026-04-06 at 9.56.24 PM.jpeg" },
-               { name: "Neural Plough v2", img: "WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg" },
-               { name: "Bio-Harvest Pro", img: "WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg" },
-               { name: "Precision Shredder", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM.jpeg" },
-               { name: "Field Commander X1", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg" },
-               { name: "Eco-Tiller Elite", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (2).jpeg" },
-               { name: "Smart Chaff Gen-5", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg" },
-               { name: "Autonomous Unit 07", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg" },
-               { name: "Digital Harvester", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg" },
-               { name: "Soil Analyzer v4", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg" },
-               { name: "Heavy Duty Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg" },
-               { name: "Kinetic Rotovator", img: "WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg" }
+               { name: "Garden Shredder / Power Chaff Cutter", img: "WhatsApp Image 2026-04-06 at 9.56.24 PM.jpeg" },
+               { name: "Multi-Crop Thresher (Labeled Diagram)", img: "WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg" },
+               { name: "Belt Drive System (Safety Guard Type)", img: "WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg" },
+               { name: "Crop Thresher (Enclosed Disk Type)", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM.jpeg" },
+               { name: "Crop Thresher (Side View)", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg" },
+               { name: "Axial Flow Thresher (Large Capacity)", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (2).jpeg" },
+               { name: "Maize Sheller / Corn Sheller", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg" },
+               { name: "Axial Flow Multi-Crop Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg" },
+               { name: "Single Bottom Reversible Plough (SC-25)", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg" },
+               { name: "Small Electric Chaff Cutter", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg" },
+               { name: "Double Bottom Reversible Plough (SC-45)", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg" },
+               { name: "Heavy Duty Multi-Crop Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg" }
              ].map((item, idx) => (
                 <motion.div 
                    key={idx}
@@ -250,10 +235,7 @@ export default function Home() {
 
       {/* 4. CHAFF CUTTER */}
       <section id="chaff-cutter" className="py-32 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-           <Image src="/images/futuristic_drone_hero.png" alt="Drone Background" fill className="object-cover" />
-           <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A]" />
-        </div>
+        {/* Background image removed */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
           <motion.div 
             initial="hidden"
@@ -342,10 +324,10 @@ export default function Home() {
          
          <div className="flex flex-col md:flex-row h-auto md:h-[700px] gap-2 px-4 max-w-[100vw] overflow-hidden">
             {[
-               { title: 'TRACTOR PLOUGH', img: '/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg', cat: 'Tractors' },
-               { title: 'MULTI THRESHER', img: '/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg', cat: 'Harvesters' },
-               { title: 'CHAFF CUTTERS', img: '/images/WhatsApp Image 2026-04-09 at 11.50.47 AM.jpeg', cat: 'Technology' },
-               { title: 'ROTOVATORS', img: '/images/WhatsApp Image 2026-04-09 at 11.50.46 AM (1).jpeg', cat: 'Irrigation' }
+               { title: 'REVERSIBLE PLOUGH', img: '/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg', cat: 'Tractors' },
+               { title: 'MULTICROP THRESHER', img: '/images/WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg', cat: 'Harvesters' },
+               { title: 'CHAFF CUTTERS', img: '/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg', cat: 'Livestock' },
+               { title: 'HD PLUS ROTAVATOR', img: '/images/WhatsApp Image 2026-04-09 at 11.50.47 AM.jpeg', cat: 'Technology' }
             ].map((item, idx) => (
                <Link key={idx} href={`/machines?category=${item.cat}`} className="relative h-[400px] md:h-full flex-1 md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-[40px] overflow-hidden group">
                   <Image src={item.img} fill className="object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000" alt={item.title} />
