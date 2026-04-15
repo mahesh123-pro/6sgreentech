@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Tractor, ChevronRight, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -22,15 +23,20 @@ export default function Navbar() {
         <div className={`relative flex justify-between items-center transition-all duration-500 ease-in-out ${scrolled ? 'bg-black/80 backdrop-blur-2xl border border-white/10 rounded-2xl h-14 px-6 shadow-[0_0_30px_rgba(0,0,0,0.5)]' : 'bg-transparent h-20 px-4'}`}>
           
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="bg-green-500 p-2 rounded-xl text-black transform group-hover:rotate-[360deg] transition-transform duration-700 shadow-[0_0_15px_rgba(34,197,94,0.5)]">
-              <Tractor size={20} />
+          <Link href="/" className="flex items-center gap-4 group">
+            <div className="relative w-12 h-12 transform group-hover:scale-110 transition-transform duration-500">
+               <Image 
+                 src="/images/new_logo.png" 
+                 alt="6S GreenTech Logo" 
+                 fill 
+                 className="object-contain" 
+               />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-white font-black text-xl tracking-tighter uppercase">
-                6S GreenTech
+              <span className="text-white font-black text-2xl tracking-tighter uppercase leading-tight">
+                6S <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">GREENTECH</span>
               </span>
-              <span className="text-green-500 text-[8px] font-bold tracking-[0.3em] uppercase">Autonomous Fleet</span>
+              <span className="text-blue-400 text-[9px] font-black tracking-[0.4em] uppercase opacity-70">Agricultural Innovation</span>
             </div>
           </Link>
 
@@ -83,7 +89,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   return (
     <Link href={href} className="relative group/link text-gray-400 font-bold hover:text-white transition-colors py-2 px-3 text-[10px] uppercase tracking-[0.2em]">
       {children}
-      <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover/link:w-full"></span>
+      <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-green-500 to-blue-500 transition-all duration-300 group-hover/link:w-full"></span>
     </Link>
   );
 }
@@ -92,7 +98,7 @@ function MobileNavLink({ href, children, onClick }: { href: string; children: Re
     <Link 
       href={href} 
       onClick={onClick}
-      className="text-gray-300 font-black text-2xl tracking-tighter uppercase hover:text-green-500 transition-colors"
+      className="text-gray-300 font-black text-2xl tracking-tighter uppercase hover:text-blue-400 transition-colors"
     >
       {children}
     </Link>

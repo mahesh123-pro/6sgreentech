@@ -46,7 +46,7 @@ export default function AboutUs() {
           className="relative z-20 text-center px-4 max-w-3xl mx-auto flex flex-col items-center pt-10"
         >
           <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 drop-shadow-lg">
-            Cultivating the <span className="text-green-400">Future</span>
+            Cultivating the <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Future</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-100 font-light drop-shadow-md">
             We are redefining modern agriculture, ensuring every farmer has access to world-class technological machinery.
@@ -65,8 +65,8 @@ export default function AboutUs() {
               variants={fadeUp}
               className="lg:w-1/2 flex flex-col justify-center"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-bold uppercase tracking-wider mb-6 w-max">
-                <Leaf size={16}/> Our Mission
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 text-sm font-bold uppercase tracking-wider mb-6 w-max border border-blue-100">
+                <Leaf size={16} className="text-green-500"/> Our Mission
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
                 Sustainable Machinery for a Growing World.

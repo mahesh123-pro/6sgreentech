@@ -49,15 +49,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black z-10" />
         </motion.div>
 
-        {/* Floating Technical Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div 
-            animate={{ y: ["0%", "100%"] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-            className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-green-500/50 to-transparent z-20 opacity-30 shadow-[0_0_20px_rgba(34,197,94,0.5)]"
-          />
-          <div className="absolute top-[10%] left-[5%] text-[25vw] font-black text-white/[0.02] tracking-tighter leading-none select-none z-0">6SG</div>
-        </div>
+
 
         {/* Ambiance Glows */}
         <motion.div 
@@ -67,17 +59,7 @@ export default function Home() {
         />
 
         <div className="relative z-30 w-full max-w-7xl mx-auto px-6 flex flex-col items-center">
-          {/* Top Badge */}
-          <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="flex items-center gap-4 mb-10"
-          >
-             <div className="h-[1px] w-12 bg-green-500/50" />
-             <span className="text-[10px] font-black tracking-[0.5em] uppercase text-green-500">Industry Protocol 6.0</span>
-             <div className="h-[1px] w-12 bg-green-500/50" />
-          </motion.div>
+
 
           {/* Main Title */}
           <motion.div 
@@ -90,33 +72,15 @@ export default function Home() {
               <motion.span 
                 key={index} 
                 variants={charVariant}
-                whileHover={{ scale: 1.1, y: -10, color: index < 2 ? "#4ade80" : "#fff" }}
-                className={`text-[8.2vw] sm:text-7xl md:text-8xl lg:text-[130px] font-black tracking-tighter cursor-default ${index < 2 ? 'text-green-500' : 'text-white'} drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]`}
+                whileHover={{ scale: 1.1, y: -10, color: index < 2 ? "#4ade80" : "#3b82f6" }}
+                className={`text-[8.2vw] sm:text-7xl md:text-8xl lg:text-[130px] font-black tracking-tighter cursor-default ${index < 2 ? 'text-green-500' : (index % 2 === 0 ? 'text-blue-500' : 'text-white')} drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]`}
               >
                 {char === " " ? "\u00A0" : char}
               </motion.span>
             ))}
           </motion.div>
           
-          {/* Tagline */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, delay: 1.5 }}
-            className="relative"
-          >
-            <p className="text-xl md:text-3xl text-gray-400 font-light max-w-2xl text-center leading-tight tracking-tight mb-4">
-              Forging the <span className="text-white font-medium">Bionomic Core</span> of tomorrow's harvest.
-            </p>
-            <div className="flex justify-center gap-4 mt-8 opacity-50">
-               {['Autonomous', 'Electric', 'Precision'].map((tag) => (
-                 <div key={tag} className="flex items-center gap-2">
-                    <div className="w-1 h-1 bg-green-500 rounded-full" />
-                    <span className="text-[10px] font-bold tracking-widest uppercase">{tag}</span>
-                 </div>
-               ))}
-            </div>
-          </motion.div>
+
         </div>
 
         {/* Bottom Scroll Indicator */}
@@ -131,9 +95,9 @@ export default function Home() {
       </section>
 
       {/* 2. INFINITE MARQUEE */}
-      <div className="relative py-6 md:py-10 bg-green-500 overflow-hidden flex whitespace-nowrap -rotate-2 transform scale-110 z-30 shadow-[0_0_50px_rgba(34,197,94,0.3)]">
+      <div className="relative py-6 md:py-10 bg-gradient-to-r from-green-600 to-blue-600 overflow-hidden flex whitespace-nowrap -rotate-1 transform scale-110 z-30 shadow-[0_0_50px_rgba(34,197,94,0.3)]">
         <motion.div 
-          animate={{ x: [0, -1000] }}
+          animate={{ x: [0, -2000] }}
           transition={{ duration: 15, ease: "linear", repeat: Infinity }}
           className="flex gap-16 items-center"
         >
@@ -141,11 +105,10 @@ export default function Home() {
             <div key={i} className="flex gap-16 items-center">
               <span className="text-4xl font-black text-black uppercase tracking-tighter">Thresher</span>
               <span className="text-black"><Tractor size={40} /></span>
-              <span className="text-4xl font-black text-black uppercase tracking-tighter">Shredder</span>
+              <span className="text-4xl font-black text-black uppercase tracking-tighter">Shredder cum Pulverizer</span>
               <span className="text-black"><Zap size={40} /></span>
               <span className="text-4xl font-black text-black uppercase tracking-tighter">Chaff Cutter</span>
               <span className="text-black"><Leaf size={40} /></span>
-              <span className="text-4xl font-black text-black uppercase tracking-tighter">Rotovator</span>
               <span className="text-black"><Shield size={40} /></span>
             </div>
           ))}
@@ -166,68 +129,67 @@ export default function Home() {
              </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-5 gap-6 max-w-7xl mx-auto min-h-[1600px]">
              {[
-               { name: "Garden Shredder / Power Chaff Cutter", img: "WhatsApp Image 2026-04-06 at 9.56.24 PM.jpeg" },
-               { name: "Multi-Crop Thresher (Labeled Diagram)", img: "WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg" },
-               { name: "Belt Drive System (Safety Guard Type)", img: "WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg" },
-               { name: "Crop Thresher (Enclosed Disk Type)", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM.jpeg" },
-               { name: "Crop Thresher (Side View)", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg" },
-               { name: "Axial Flow Thresher (Large Capacity)", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (2).jpeg" },
-               { name: "Maize Sheller / Corn Sheller", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg" },
-               { name: "Axial Flow Multi-Crop Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg" },
-               { name: "Single Bottom Reversible Plough (SC-25)", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg" },
-               { name: "Small Electric Chaff Cutter", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg" },
-               { name: "Double Bottom Reversible Plough (SC-45)", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg" },
-               { name: "Heavy Duty Multi-Crop Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg" }
+               { name: "Garden Shredder / Power Chaff Cutter", img: "WhatsApp Image 2026-04-06 at 9.56.24 PM.jpeg", span: "md:col-span-2 md:row-span-2" },
+               { name: "Multi-Crop Thresher", img: "WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg", span: "md:col-span-2 md:row-span-1" },
+               { name: "chaffcutter", img: "WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg", span: "md:col-span-2 md:row-span-1" },
+               { name: "Shedder cum pulverizer", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg", span: "md:col-span-2 md:row-span-2" },
+               { name: "Maize Sheller", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg", span: "md:col-span-1 md:row-span-1" },
+               { name: "Multi-Crop Thresher Plus", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg", span: "md:col-span-1 md:row-span-1" },
+               { name: "Reversible Plough (SC-25)", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg", span: "md:col-span-1 md:row-span-1" },
+               { name: "Small Electric Chaff Cutter", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg", span: "md:col-span-1 md:row-span-1" },
+               { name: "Double Bottom Reversible Plough", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg", span: "md:col-span-2 md:row-span-1" },
+               { name: "Heavy Duty Multi-Crop Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg", span: "md:col-span-2 md:row-span-1" }
              ].map((item, idx) => (
                 <motion.div 
                    key={idx}
-                   initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
-                   whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                   whileHover={{ 
-                      y: -20, 
-                      scale: 1.05, 
-                      rotateX: idx % 2 === 0 ? 3 : -3,
-                      rotateY: idx % 3 === 0 ? 3 : -3,
-                      boxShadow: "0px 30px 60px rgba(34, 197, 94, 0.4)",
-                      transition: { type: "spring", stiffness: 150, damping: 15 }
-                   }}
-                   viewport={{ once: true, margin: "-100px" }}
-                   transition={{ 
-                      opacity: { duration: 1 },
-                      y: { duration: 1, ease: "easeOut" }
-                   }}
-                   className="relative h-[450px] rounded-[40px] overflow-hidden group border border-white/10 bg-[#111]"
+                   initial={{ opacity: 0, y: 20 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   viewport={{ once: true }}
+                   transition={{ duration: 0.8 }}
+                   className={`relative group overflow-hidden bg-black border border-white/5 ${item.span}`}
                 >
-                   <Image 
-                      src={`/images/${item.img}`} 
-                      alt={item.name} 
-                      fill 
-                      className="object-cover transition-all duration-[4s] ease-out group-hover:scale-110 group-hover:rotate-1" 
-                   />
+                   {/* Industrial Outer Frame */}
+                   <div className="absolute inset-0 border-[0.5px] border-white/10 group-hover:border-green-500/50 transition-colors duration-700 z-20 pointer-events-none" />
                    
-                   {/* Gradient Overlays */}
-                   <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-90 transition-opacity duration-1000 group-hover:opacity-50" />
-                   
-                   {/* Scanning Light Effect */}
-                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-500/10 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-[1.5s] ease-in-out pointer-events-none" />
-                   
-                   {/* Floating Tech Tag */}
-                   <div className="absolute bottom-8 left-8 right-8 z-20">
-                      <motion.div 
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        className="bg-white/5 backdrop-blur-xl border border-white/10 px-4 py-2 rounded-xl flex items-center gap-3 w-fit"
-                      >
-                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                         <span className="text-xs font-bold tracking-widest uppercase text-gray-300">{item.name}</span>
-                      </motion.div>
+                   {/* Corner Accents */}
+                   <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-green-500/0 group-hover:border-green-500 transition-all duration-500 z-30" />
+                   <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-green-500/0 group-hover:border-green-500 transition-all duration-500 z-30" />
+
+                   {/* Image Stage */}
+                   <div className="relative h-full w-full grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 ease-out group-hover:scale-110">
+                      <Image 
+                         src={`/images/${item.img}`} 
+                         alt={item.name} 
+                         fill 
+                         className="object-cover" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 group-hover:opacity-40 transition-opacity" />
                    </div>
 
-                   {/* Corner Accents */}
-                   <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-green-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                   <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-green-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                   {/* Tech HUD Information */}
+                   <div className="absolute bottom-0 left-0 w-full z-30">
+                      <div className="p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col gap-1 transition-transform duration-500">
+                         <div className="flex items-center gap-2">
+                            <div className="w-1 h-1 bg-blue-500" />
+                            <span className="text-[9px] font-mono text-blue-400 tracking-widest">PROT_ID: 6SG-{idx+1}</span>
+                         </div>
+                         <h3 className="text-xl font-black italic tracking-tighter text-white uppercase drop-shadow-lg">{item.name}</h3>
+                         
+                         {/* Details on Hover */}
+                         <div className="mt-2 h-0 group-hover:h-6 overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100 flex gap-4 items-center">
+                            <span className="text-[9px] text-blue-400 font-bold uppercase tracking-tighter border border-blue-500/20 px-2 bg-blue-500/5">High Performance</span>
+                            <span className="text-[9px] text-green-400 font-bold uppercase tracking-tighter border border-green-500/20 px-2 bg-green-500/5">Eco Precision</span>
+                            <MoveRight size={12} className="text-blue-400 ml-auto" />
+                         </div>
+                      </div>
+                   </div>
+
+                   {/* Technical Overlay Markers */}
+                   <div className="absolute top-4 left-4 z-40 opacity-20 pointer-events-none">
+                      <span className="text-[7px] font-mono text-white">44.02 // 6SG_PRT</span>
+                   </div>
                 </motion.div>
              ))}
           </div>
@@ -249,59 +211,23 @@ export default function Home() {
             <p className="text-xl text-gray-400 mb-10 leading-relaxed">
               Precision cutting for superior fodder. Our electric chaff cutters deliver uniform lengths for better digestion and zero wastage. Designed for safety, speed, and silence.
             </p>
-            <button className="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-green-500 transition-colors">
+            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-black rounded-full hover:scale-105 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)]">
                Technical Specs
             </button>
           </motion.div>
           <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, type: "spring" }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="relative h-[400px] lg:h-[600px] rounded-[40px] overflow-hidden order-1 lg:order-2 group bg-[#111] p-8 border border-white/5"
+            className="relative h-[400px] lg:h-[600px] order-1 lg:order-2 overflow-hidden"
           >
-            <Image src="/images/real_yellow_cutter.png" alt="Chaff Cutter" fill className="object-contain p-12 group-hover:scale-105 transition-transform duration-700" />
-            <div className="absolute top-10 right-10 bg-green-500/20 backdrop-blur-md px-4 py-2 rounded-full border border-green-500/30">
-               <span className="text-green-400 text-sm font-bold">New Gen 4.0</span>
-            </div>
+            <Image src="/images/real_yellow_cutter.png" alt="Chaff Cutter" fill className="object-contain p-12 hover:scale-105 transition-transform duration-1000" />
           </motion.div>
         </div>
       </section>
 
-      {/* 5. ROTOVATOR */}
-      <section id="rotovator" className="py-32 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center bg-gradient-to-b from-transparent to-green-950/20 rounded-[60px]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div 
-            initial={{ opacity: 0, rotateY: -45 }}
-            whileInView={{ opacity: 1, rotateY: 0 }}
-            transition={{ duration: 1.2 }}
-            viewport={{ once: true }}
-            className="relative h-[400px] lg:h-[600px] rounded-[40px] overflow-hidden group"
-          >
-            <Image src="/images/real_rotavator.png" alt="Rotovator" fill className="object-cover group-hover:scale-110 transition-transform duration-[3s]" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          </motion.div>
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={springVariant}
-          >
-            <span className="text-green-500 font-bold tracking-widest uppercase mb-4 block">Soil Mastery</span>
-            <h2 className="text-5xl md:text-7xl font-black mb-8 leading-none">ROTOVATO<span className="text-green-500">R</span></h2>
-            <p className="text-xl text-gray-400 mb-10 leading-relaxed">
-              The ultimate seedbed preparation. Our rotovators feature heavy-duty gearboxes and boron steel blades that crumble the toughest soil into a perfect tilth. Prepare your land for greatness.
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-               {['Boron Steel Blades', 'Multi-speed Gearbox', 'Adjustable Trailing Board', 'Oil-immersed Drive'].map((tag, i) => (
-                 <div key={i} className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-medium">
-                    {tag}
-                 </div>
-               ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* 6. ALL IMPLEMENTS */}
       <section id="all-implements" className="py-32 relative border-y border-white/10 bg-[#0A0A0A]">
@@ -322,23 +248,23 @@ export default function Home() {
             </motion.div>
          </div>
          
-         <div className="flex flex-col md:flex-row h-auto md:h-[700px] gap-2 px-4 max-w-[100vw] overflow-hidden">
+          <div className="flex flex-col md:flex-row h-auto md:h-[700px] gap-4 px-4 max-w-[100vw] overflow-hidden">
             {[
-               { title: 'REVERSIBLE PLOUGH', img: '/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg', cat: 'Tractors' },
-               { title: 'MULTICROP THRESHER', img: '/images/WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg', cat: 'Harvesters' },
-               { title: 'CHAFF CUTTERS', img: '/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg', cat: 'Livestock' },
-               { title: 'HD PLUS ROTAVATOR', img: '/images/WhatsApp Image 2026-04-09 at 11.50.47 AM.jpeg', cat: 'Technology' }
+               { title: 'REVERSIBLE PLOUGH', img: '/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg', cat: 'TRACTORS' },
+               { title: 'MULTICROP THRESHER', img: '/images/WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg', cat: 'HARVESTERS' },
+               { title: 'CHAFF CUTTERS', img: '/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg', cat: 'LIVESTOCK' }
             ].map((item, idx) => (
-               <Link key={idx} href={`/machines?category=${item.cat}`} className="relative h-[400px] md:h-full flex-1 md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-[40px] overflow-hidden group">
-                  <Image src={item.img} fill className="object-cover opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000" alt={item.title} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent z-10" />
-                  <div className="absolute bottom-12 left-12 opacity-100 md:opacity-0 md:-translate-x-10 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700 delay-100 z-20">
-                     <h3 className="text-5xl font-black italic tracking-tighter text-white mb-2">{item.title}</h3>
-                     <div className="h-[3px] w-0 group-hover:w-full bg-green-500 transition-all duration-700"></div>
+               <Link key={idx} href={`/machines?category=${item.cat}`} className="relative h-[400px] md:h-full flex-1 md:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group overflow-hidden">
+                  <Image src={item.img} fill className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000" alt={item.title} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-60" />
+                  
+                  <div className="absolute bottom-12 left-12 z-20 w-3/4">
+                     <span className="text-blue-500 text-[10px] font-black tracking-[0.5em] mb-2 block uppercase">{item.cat}</span>
+                     <h3 className="text-4xl md:text-5xl lg:text-6xl font-black italic tracking-tighter text-white mb-4 leading-none">{item.title}</h3>
                   </div>
                </Link>
             ))}
-         </div>
+          </div>
       </section>
 
       {/* 7. CONTACT US */}

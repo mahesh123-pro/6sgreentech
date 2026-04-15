@@ -1,18 +1,19 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { Tractor, Globe, Share2, MessageSquare, Shield } from 'lucide-react';
+import { Globe, Share2, MessageSquare, Shield } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-white/5 text-white py-24 pb-12">
+    <footer className="bg-[#050505] border-t border-white/5 text-white py-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="bg-green-600 p-2 rounded-xl text-white">
-                <Tractor size={24} />
+            <Link href="/" className="flex items-center gap-4 mb-6">
+              <div className="relative w-10 h-10">
+                <Image src="/images/new_logo.png" alt="6S GreenTech Logo" fill className="object-contain" />
               </div>
               <span className="text-white font-black text-2xl tracking-tighter uppercase">
-                6S Green Tech
+                6S <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">GREENTECH</span>
               </span>
             </Link>
             <p className="text-gray-400 text-lg max-w-sm leading-relaxed">
@@ -21,20 +22,20 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-6">Quick Links</h3>
+            <h3 className="text-white font-bold uppercase tracking-widest text-[10px] mb-6 opacity-50">Quick Links</h3>
             <ul className="space-y-4">
-              <li><Link href="#intro" className="text-gray-400 hover:text-green-500 transition-colors">Intro</Link></li>
-              <li><Link href="#all-implements" className="text-gray-400 hover:text-green-500 transition-colors">Catalog</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-green-500 transition-colors">About Team</Link></li>
-              <li><Link href="#contact" className="text-gray-400 hover:text-green-500 transition-colors">Support</Link></li>
+              <li><Link href="#intro" className="text-gray-400 hover:text-blue-400 transition-colors font-bold uppercase tracking-widest text-[10px]">Intro</Link></li>
+              <li><Link href="#all-implements" className="text-gray-400 hover:text-blue-400 transition-colors font-bold uppercase tracking-widest text-[10px]">Catalog</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-blue-400 transition-colors font-bold uppercase tracking-widest text-[10px]">About Team</Link></li>
+              <li><Link href="#contact" className="text-gray-400 hover:text-blue-400 transition-colors font-bold uppercase tracking-widest text-[10px]">Support</Link></li>
             </ul>
           </div>
-
+          
           <div>
-            <h3 className="text-white font-bold uppercase tracking-widest text-sm mb-6">Connect</h3>
+            <h3 className="text-white font-bold uppercase tracking-widest text-[10px] mb-6 opacity-50">Connect</h3>
             <div className="flex gap-4">
               {[Globe, Share2, MessageSquare, Shield].map((Icon, i) => (
-                <a key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-green-600 hover:border-green-600 transition-all group">
+                <a key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600 hover:to-green-600 hover:border-transparent transition-all group">
                   <Icon size={20} className="text-gray-400 group-hover:text-white transition-colors" />
                 </a>
               ))}

@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { ShieldCheck, Calendar, Activity, Cpu } from 'lucide-react';
 
 const mockMachines = {
-  '1': { _id: '1', name: 'Double Bottom Reversible Plough (SC-45)', category: 'Tractors', price: 85000, description: 'High-performance double bottom reversible plough designed for heavy-duty soil inversion.', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg'], specs: { power: '45-60 hp', usage: 'Soil preparation', engine: 'N/A' } },
-  '2': { _id: '2', name: 'Multi-Crop Thresher (Labeled Diagram)', category: 'Harvesters', price: 120000, description: 'Versatile multicrop thresher with labeled components for easy operation and maintenance.', images: ['/images/WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg'], specs: { power: '35 hp', usage: 'Multi-grain threshing', engine: 'Tractor PTO' } },
-  '3': { _id: '3', name: 'HD Plus Rotovator', category: 'Technology', price: 95000, description: 'Premium HD Plus rotovator for superior seedbed preparation.', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.47 AM.jpeg'], specs: { power: '40-50 hp', usage: 'Soil tilling', length: '7 ft' } },
-  '4': { _id: '4', name: 'Heavy Duty Multi-Crop Thresher', category: 'Livestock', price: 45000, description: 'Robust multi-crop thresher designed for heavy-duty commercial use.', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg'], specs: { power: '5-10 hp', usage: 'Commercial threshing', transmission: 'Belt driven' } }
+  '1': { _id: '1', name: 'Reversible Plough (SC-45)', category: 'Tractors', price: 85000, description: 'High-performance double bottom reversible plough designed for heavy-duty soil inversion and efficient land preparation.', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg'], specs: { power: '45-60 hp', usage: 'Soil preparation', engine: 'N/A' } },
+  '2': { _id: '2', name: 'Shedder cum pulverizer', category: 'Harvesters', price: 120000, description: 'High-efficiency dual-action machine specialized in shredding crop stalks and pulverizing them into fine nutrient-rich particles.', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg'], specs: { power: '30+ hp', usage: 'Waste management', engine: 'Tractor PTO' } },
+  '3': { _id: '3', name: 'chaffcutter', category: 'Livestock', price: 65000, description: 'Rugged and reliable chaff cutter with high-grade steel blades for precision fodder preparation.', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg'], specs: { power: '3 hp', usage: 'Livestock feeding', weight: '120 kg' } },
+  '4': { _id: '4', name: 'Multi-Crop Thresher', category: 'Harvesters', price: 180000, description: 'State-of-the-art multi-crop thresher for high-capacity grain separation with minimal seed damage.', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg'], specs: { power: '35+ hp', usage: 'Grain separation', transmission: 'Belt driven' } }
 };
 
 export default function MachineDetails() {

@@ -7,10 +7,10 @@ import Link from 'next/link';
 // I will include mock data as a fallback to ensure the demo is always beautiful and working.
 
 const mockMachines = [
-  { _id: '1', name: 'John Deere 8RX', category: 'Tractors', price: 320000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg'], specs: { power: '410 hp', usage: 'Heavy plowing' } },
-  { _id: '2', name: 'Case IH Axial-Flow', category: 'Harvesters', price: 450000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg'], specs: { power: '550 hp', usage: 'Wheat, Corn harvesting' } },
-  { _id: '3', name: 'Valley Center Pivot', category: 'Irrigation', price: 150000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.47 AM.jpeg'], specs: { power: 'Electric 480V', usage: 'Large scale watering' } },
-  { _id: '4', name: 'Massey Ferguson 8S', category: 'Tractors', price: 210000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.46 AM (1).jpeg'], specs: { power: '265 hp', usage: 'General farm work' } },
+  { _id: '1', name: 'Reversible Plough (SC-45)', category: 'Tractors', price: 85000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg'], specs: { power: '45+ hp', usage: 'Soil preparation' } },
+  { _id: '2', name: 'Shedder cum pulverizer', category: 'Harvesters', price: 120000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg'], specs: { power: '30+ hp', usage: 'Waste management' } },
+  { _id: '3', name: 'chaffcutter', category: 'Livestock', price: 65000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg'], specs: { power: '3 hp', usage: 'Fodder cutting' } },
+  { _id: '4', name: 'Multi-Crop Thresher', category: 'Harvesters', price: 180000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg'], specs: { power: '35+ hp', usage: 'Grain separation' } },
 ];
 
 export default function MachineryListing() {
