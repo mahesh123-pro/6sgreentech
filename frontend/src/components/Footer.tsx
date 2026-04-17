@@ -10,10 +10,10 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-4 mb-6">
               <div className="relative w-10 h-10">
-                <Image src="/images/new_logo.png" alt="6S GreenTech Logo" fill className="object-contain" />
+                <Image src="/images/logo.jpeg" alt="6S GreenTech Logo" fill className="object-contain" />
               </div>
               <span className="text-white font-black text-2xl tracking-tighter uppercase">
-                6S <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">GREENTECH</span>
+                6S <span className="text-green-500">GREENTECH</span>
               </span>
             </Link>
             <p className="text-gray-400 text-lg max-w-sm leading-relaxed">

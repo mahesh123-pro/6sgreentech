@@ -72,8 +72,8 @@ export default function Home() {
               <motion.span 
                 key={index} 
                 variants={charVariant}
-                whileHover={{ scale: 1.1, y: -10, color: index < 2 ? "#4ade80" : "#3b82f6" }}
-                className={`text-[8.2vw] sm:text-7xl md:text-8xl lg:text-[130px] font-black tracking-tighter cursor-default ${index < 2 ? 'text-green-500' : (index % 2 === 0 ? 'text-blue-500' : 'text-white')} drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]`}
+                whileHover={{ scale: 1.1, y: -10 }}
+                className={`text-[8.2vw] sm:text-7xl md:text-8xl lg:text-[130px] font-black tracking-tighter cursor-default ${index >= 3 ? 'text-green-500' : 'text-white'} drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]`}
               >
                 {char === " " ? "\u00A0" : char}
               </motion.span>
@@ -107,8 +107,6 @@ export default function Home() {
               <span className="text-black"><Tractor size={40} /></span>
               <span className="text-4xl font-black text-black uppercase tracking-tighter">Shredder cum Pulverizer</span>
               <span className="text-black"><Zap size={40} /></span>
-              <span className="text-4xl font-black text-black uppercase tracking-tighter">Chaff Cutter</span>
-              <span className="text-black"><Leaf size={40} /></span>
               <span className="text-black"><Shield size={40} /></span>
             </div>
           ))}
@@ -130,18 +128,16 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-5 gap-6 max-w-7xl mx-auto min-h-[1600px]">
-             {[
-               { name: "Garden Shredder / Power Chaff Cutter", img: "WhatsApp Image 2026-04-06 at 9.56.24 PM.jpeg", span: "md:col-span-2 md:row-span-2" },
-               { name: "Multi-Crop Thresher", img: "WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg", span: "md:col-span-2 md:row-span-1" },
-               { name: "chaffcutter", img: "WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg", span: "md:col-span-2 md:row-span-1" },
-               { name: "Shedder cum pulverizer", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg", span: "md:col-span-2 md:row-span-2" },
-               { name: "Maize Sheller", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg", span: "md:col-span-1 md:row-span-1" },
-               { name: "Multi-Crop Thresher Plus", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg", span: "md:col-span-1 md:row-span-1" },
-               { name: "Reversible Plough (SC-25)", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg", span: "md:col-span-1 md:row-span-1" },
-               { name: "Small Electric Chaff Cutter", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg", span: "md:col-span-1 md:row-span-1" },
-               { name: "Double Bottom Reversible Plough", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg", span: "md:col-span-2 md:row-span-1" },
-               { name: "Heavy Duty Multi-Crop Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg", span: "md:col-span-2 md:row-span-1" }
-             ].map((item, idx) => (
+              {[
+                { name: "Garden Shredder / Power Chaff Cutter", img: "WhatsApp Image 2026-04-06 at 9.56.24 PM.jpeg", span: "md:col-span-2 md:row-span-2" },
+                { name: "Shedder cum pulverizer", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg", span: "md:col-span-2 md:row-span-2" },
+                { name: "Multi-Crop Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg", span: "md:col-span-2 md:row-span-1" },
+                { name: "Maize Sheller", img: "Maize sheller.jpeg", span: "md:col-span-2 md:row-span-1" },
+                { name: "Reversible hydraulic plough", img: "Reversible hydraulic plough.jpeg", span: "md:col-span-2 md:row-span-1" },
+                { name: "Heavy Duty Multi-Crop Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg", span: "md:col-span-2 md:row-span-1" },
+                { name: "Multi-Crop Thresher Plus", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg", span: "md:col-span-2 md:row-span-1" },
+                { name: "Reversible Plough (SC-25)", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM (1).jpeg", span: "md:col-span-2 md:row-span-1" }
+              ].map((item, idx) => (
                 <motion.div 
                    key={idx}
                    initial={{ opacity: 0, y: 20 }}
@@ -158,15 +154,17 @@ export default function Home() {
                    <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-green-500/0 group-hover:border-green-500 transition-all duration-500 z-30" />
 
                    {/* Image Stage */}
-                   <div className="relative h-full w-full grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 ease-out group-hover:scale-110">
+                    <div className="absolute inset-0 bg-neutral-900/50 group-hover:bg-neutral-900/20 transition-colors duration-500" />
+                    <div className="relative w-full h-full p-4 overflow-hidden">
                       <Image 
-                         src={`/images/${item.img}`} 
-                         alt={item.name} 
-                         fill 
-                         className="object-cover" 
+                        src={`/images/${item.img}`}
+                        alt={item.name}
+                        layout="fill"
+                        objectFit="contain"
+                        className="transition-transform duration-700 group-hover:scale-105 p-4"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 group-hover:opacity-40 transition-opacity" />
-                   </div>
+                    </div>
+                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90 group-hover:opacity-40 transition-opacity" />
 
                    {/* Tech HUD Information */}
                    <div className="absolute bottom-0 left-0 w-full z-30">
@@ -195,37 +193,6 @@ export default function Home() {
           </div>
       </section>
 
-      {/* 4. CHAFF CUTTER */}
-      <section id="chaff-cutter" className="py-32 relative px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center overflow-hidden">
-        {/* Background image removed */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={springVariant}
-            className="order-2 lg:order-1"
-          >
-            <span className="text-green-500 font-bold tracking-widest uppercase mb-4 block">Livestock Nutrition</span>
-            <h2 className="text-5xl md:text-7xl font-black mb-8 leading-none">CHAFF <span className="text-green-500">CUTTER</span></h2>
-            <p className="text-xl text-gray-400 mb-10 leading-relaxed">
-              Precision cutting for superior fodder. Our electric chaff cutters deliver uniform lengths for better digestion and zero wastage. Designed for safety, speed, and silence.
-            </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-black rounded-full hover:scale-105 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-               Technical Specs
-            </button>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="relative h-[400px] lg:h-[600px] order-1 lg:order-2 overflow-hidden"
-          >
-            <Image src="/images/real_yellow_cutter.png" alt="Chaff Cutter" fill className="object-contain p-12 hover:scale-105 transition-transform duration-1000" />
-          </motion.div>
-        </div>
-      </section>
 
 
 
@@ -251,8 +218,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row h-auto md:h-[700px] gap-4 px-4 max-w-[100vw] overflow-hidden">
             {[
                { title: 'REVERSIBLE PLOUGH', img: '/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg', cat: 'TRACTORS' },
-               { title: 'MULTICROP THRESHER', img: '/images/WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg', cat: 'HARVESTERS' },
-               { title: 'CHAFF CUTTERS', img: '/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg', cat: 'LIVESTOCK' }
+               { title: 'MULTICROP THRESHER', img: '/images/WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg', cat: 'HARVESTERS' }
             ].map((item, idx) => (
                <Link key={idx} href={`/machines?category=${item.cat}`} className="relative h-[400px] md:h-full flex-1 md:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group overflow-hidden">
                   <Image src={item.img} fill className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000" alt={item.title} />

@@ -7,10 +7,10 @@ import Link from 'next/link';
 // I will include mock data as a fallback to ensure the demo is always beautiful and working.
 
 const mockMachines = [
-  { _id: '1', name: 'Reversible Plough (SC-45)', category: 'Tractors', price: 85000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg'], specs: { power: '45+ hp', usage: 'Soil preparation' } },
-  { _id: '2', name: 'Shedder cum pulverizer', category: 'Harvesters', price: 120000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg'], specs: { power: '30+ hp', usage: 'Waste management' } },
-  { _id: '3', name: 'chaffcutter', category: 'Livestock', price: 65000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg'], specs: { power: '3 hp', usage: 'Fodder cutting' } },
-  { _id: '4', name: 'Multi-Crop Thresher', category: 'Harvesters', price: 180000, images: ['/images/WhatsApp Image 2026-04-09 at 11.50.46 AM.jpeg'], specs: { power: '35+ hp', usage: 'Grain separation' } },
+  { _id: '1', name: 'Reversible Plough (SC-45)', category: 'Tractors', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.45 AM (1).jpeg'], specs: { power: '45+ hp', usage: 'Soil preparation' } },
+  { _id: '2', name: 'Shedder cum pulverizer', category: 'Harvesters', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg'], specs: { power: '30+ hp', usage: 'Waste management' } },
+  { _id: '4', name: 'Multi-Crop Thresher', category: 'Harvesters', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg'], specs: { power: '35+ hp', usage: 'Grain separation' } },
+  { _id: '5', name: 'Maize Sheller', category: 'Harvesters', images: ['/images/Maize sheller.jpeg'], specs: { power: '20+ hp', usage: 'Maize shelling' } },
 ];
 
 export default function MachineryListing() {
@@ -58,7 +58,6 @@ export default function MachineryListing() {
                 <h3 className="text-lg font-bold text-gray-900 mb-1">{machine.name}</h3>
                 <p className="text-sm text-gray-500 mb-4">{machine.specs?.power} • {machine.specs?.usage}</p>
                 <div className="mt-auto flex items-center justify-between">
-                  <span className="text-xl font-bold text-gray-900">${machine.price?.toLocaleString()}</span>
                   <span className="text-green-600 font-medium text-sm">View Details &rarr;</span>
                 </div>
               </div>

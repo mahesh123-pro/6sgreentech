@@ -26,7 +26,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-4 group">
             <div className="relative w-12 h-12 transform group-hover:scale-110 transition-transform duration-500">
                <Image 
-                 src="/images/new_logo.png" 
+                 src="/images/logo.jpeg" 
                  alt="6S GreenTech Logo" 
                  fill 
                  className="object-contain" 
@@ -34,7 +34,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col leading-none">
               <span className="text-white font-black text-2xl tracking-tighter uppercase leading-tight">
-                6S <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">GREENTECH</span>
+                6S <span className="text-green-500">GREENTECH</span>
               </span>
               <span className="text-blue-400 text-[9px] font-black tracking-[0.4em] uppercase opacity-70">Agricultural Innovation</span>
             </div>
@@ -44,7 +44,7 @@ export default function Navbar() {
           <div className="flex gap-1 md:gap-4 lg:gap-6 items-center hidden md:flex">
             <NavLink href="/#intro">Intro</NavLink>
             <NavLink href="/#gallery">Real Impact</NavLink>
-            <NavLink href="/#chaff-cutter">Technology</NavLink>
+            <NavLink href="/technology">Technology</NavLink>
             <NavLink href="/machines">Fleet</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/#contact">Contact</NavLink>
@@ -72,7 +72,7 @@ export default function Navbar() {
             <div className="flex flex-col p-6 gap-4">
               <MobileNavLink href="/#intro" onClick={() => setIsMobileMenuOpen(false)}>Intro</MobileNavLink>
               <MobileNavLink href="/#gallery" onClick={() => setIsMobileMenuOpen(false)}>Real Impact</MobileNavLink>
-              <MobileNavLink href="/#chaff-cutter" onClick={() => setIsMobileMenuOpen(false)}>Technology</MobileNavLink>
+              <MobileNavLink href="/technology" onClick={() => setIsMobileMenuOpen(false)}>Technology</MobileNavLink>
               <MobileNavLink href="/machines" onClick={() => setIsMobileMenuOpen(false)}>Fleet Catalog</MobileNavLink>
               <MobileNavLink href="/about" onClick={() => setIsMobileMenuOpen(false)}>About Us</MobileNavLink>
               <MobileNavLink href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</MobileNavLink>
