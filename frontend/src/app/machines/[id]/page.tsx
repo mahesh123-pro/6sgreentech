@@ -42,7 +42,7 @@ const mockMachines: Record<string, any> = {
     name: 'Reversible Hydraulic Plough', 
     category: 'Tractors / Implements', 
     description: 'Engineered for deep-level soil inversion. The hydraulic reversible mechanism allows for seamless field navigation without the need for manual adjustment, saving time and fuel.', 
-    images: ['/images/reversible_hydraulic_plough.jpeg'], 
+    images: ['/images/plough_final.jpeg'], 
     specs: { bottoms: '2-3 Furrow', depth: '12-14 inches', hitch: 'Cat II' } 
   },
   '6': { 
