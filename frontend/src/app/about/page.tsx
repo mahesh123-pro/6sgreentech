@@ -31,9 +31,27 @@ export default function AboutUs() {
           ABOUT <span className="text-green-500">US.</span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-gray-400 leading-relaxed mb-12 font-light">
-          6S GreenTech is dedicated to revolutionizing agriculture through high-performance machinery and sustainable innovation. Our mission is to empower farmers with the world&apos;s most reliable and efficient technological tools.
-        </p>
+        <div className="space-y-12 mb-16">
+          <div className="flex flex-col items-center">
+            <span className="text-green-500 font-bold text-[10px] tracking-[0.5em] uppercase mb-4 opacity-80 flex items-center gap-2">
+              <div className="w-1 h-1 bg-green-500 rounded-full" /> Vision
+            </span>
+            <h2 className="text-2xl md:text-4xl font-light italic text-white/90 tracking-tight leading-tight max-w-2xl">
+              "To make every field, every day, productive for <span className="text-green-500 font-semibold not-italic">all farmers</span>"
+            </h2>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <span className="text-blue-500 font-bold text-[10px] tracking-[0.5em] uppercase mb-4 opacity-80 flex items-center gap-2">
+              <div className="w-1 h-1 bg-blue-500 rounded-full" /> Mission
+            </span>
+            <p className="text-xl md:text-2xl text-gray-400 font-medium max-w-3xl leading-relaxed">
+              All kind of machinery for all kind of purpose with <br className="hidden md:block"/>
+              <span className="text-white">best sales, spares and service</span>
+            </p>
+          </div>
+        </div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           <motion.div 
