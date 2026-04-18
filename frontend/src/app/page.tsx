@@ -97,7 +97,7 @@ export default function Home() {
             <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
             <div className="flex flex-col items-center">
-              <span className="text-blue-500 font-bold text-[10px] tracking-[0.5em] uppercase mb-4 opacity-80">Our Mission</span>
+              <span className="text-green-500 font-bold text-[10px] tracking-[0.5em] uppercase mb-4 opacity-80">Our Mission</span>
               <p className="text-lg md:text-xl text-gray-400 font-medium max-w-2xl leading-relaxed">
                 All kind of machinery for all kind of purpose with <br className="hidden md:block"/>
                 <span className="text-white">best sales, spares and service</span>
@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* 2. INFINITE MARQUEE */}
-      <div className="relative py-6 md:py-10 bg-gradient-to-r from-green-600 to-blue-600 overflow-hidden flex whitespace-nowrap -rotate-1 transform scale-110 z-30 shadow-[0_0_50px_rgba(34,197,94,0.3)]">
+      <div className="relative py-6 md:py-10 bg-gradient-to-r from-green-600 to-green-800 overflow-hidden flex whitespace-nowrap -rotate-1 transform scale-110 z-30 shadow-[0_0_50px_rgba(34,197,94,0.3)]">
         <motion.div 
           animate={{ x: [0, -2000] }}
           transition={{ duration: 15, ease: "linear", repeat: Infinity }}
@@ -206,9 +206,9 @@ export default function Home() {
                             <motion.div 
                               animate={{ opacity: [0.4, 1, 0.4] }} 
                               transition={{ duration: 2, repeat: Infinity }}
-                              className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]" 
+                              className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.8)]" 
                             />
-                            <span className="text-[10px] font-mono text-blue-400 tracking-[0.3em] font-black uppercase">SYS_LOG: 6SG/{idx + 100}</span>
+                            <span className="text-[10px] font-mono text-green-500/80 tracking-[0.3em] font-black uppercase">SYS_LOG: 6SG/{idx + 100}</span>
                          </div>
                          <h3 className="text-2xl md:text-3xl font-black italic tracking-tighter text-white uppercase leading-none drop-shadow-2xl">
                            {item.name}
@@ -225,7 +225,7 @@ export default function Home() {
                                <span className="text-[8px] text-gray-500 uppercase font-bold tracking-widest">Efficiency</span>
                                <span className="text-[10px] text-white font-bold uppercase">98.2%</span>
                             </div>
-                            <MoveRight size={18} className="text-blue-500 ml-auto group-hover:translate-x-2 transition-transform duration-500" />
+                            <MoveRight size={18} className="text-green-500 ml-auto group-hover:translate-x-2 transition-transform duration-500" />
                          </div>
                       </div>
                    </div>
@@ -272,7 +272,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-60" />
                   
                   <div className="absolute bottom-12 left-12 z-20 w-3/4">
-                     <span className="text-blue-500 text-[10px] font-black tracking-[0.5em] mb-2 block uppercase">{item.cat}</span>
+                     <span className="text-green-500 text-[10px] font-black tracking-[0.5em] mb-2 block uppercase">{item.cat}</span>
                      <h3 className="text-4xl md:text-5xl lg:text-6xl font-black italic tracking-tighter text-white mb-4 leading-none">{item.title}</h3>
                   </div>
                </Link>

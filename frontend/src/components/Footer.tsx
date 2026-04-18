@@ -24,10 +24,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold uppercase tracking-widest text-[10px] mb-6 opacity-50">Quick Links</h3>
             <ul className="space-y-4">
-              <li><Link href="#intro" className="text-gray-400 hover:text-blue-400 transition-colors font-bold uppercase tracking-widest text-[10px]">Intro</Link></li>
-              <li><Link href="#all-implements" className="text-gray-400 hover:text-blue-400 transition-colors font-bold uppercase tracking-widest text-[10px]">Catalog</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-blue-400 transition-colors font-bold uppercase tracking-widest text-[10px]">About Team</Link></li>
-              <li><Link href="#contact" className="text-gray-400 hover:text-blue-400 transition-colors font-bold uppercase tracking-widest text-[10px]">Support</Link></li>
+              <li><Link href="#intro" className="text-gray-400 hover:text-green-400 transition-colors font-bold uppercase tracking-widest text-[10px]">Intro</Link></li>
+              <li><Link href="#all-implements" className="text-gray-400 hover:text-green-400 transition-colors font-bold uppercase tracking-widest text-[10px]">Catalog</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-green-400 transition-colors font-bold uppercase tracking-widest text-[10px]">About Team</Link></li>
+              <li><Link href="#contact" className="text-gray-400 hover:text-green-400 transition-colors font-bold uppercase tracking-widest text-[10px]">Support</Link></li>
             </ul>
           </div>
           
@@ -35,7 +35,7 @@ export default function Footer() {
             <h3 className="text-white font-bold uppercase tracking-widest text-[10px] mb-6 opacity-50">Connect</h3>
             <div className="flex gap-4">
               {[Globe, Share2, MessageSquare, Shield].map((Icon, i) => (
-                <a key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600 hover:to-green-600 hover:border-transparent transition-all group">
+                <a key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-green-600 hover:to-green-400 hover:border-transparent transition-all group">
                   <Icon size={20} className="text-gray-400 group-hover:text-white transition-colors" />
                 </a>
               ))}

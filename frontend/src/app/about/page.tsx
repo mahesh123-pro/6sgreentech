@@ -42,8 +42,8 @@ export default function AboutUs() {
           </div>
 
           <div className="flex flex-col items-center">
-            <span className="text-blue-500 font-bold text-[10px] tracking-[0.5em] uppercase mb-4 opacity-80 flex items-center gap-2">
-              <div className="w-1 h-1 bg-blue-500 rounded-full" /> Mission
+            <span className="text-green-500 font-bold text-[10px] tracking-[0.5em] uppercase mb-4 opacity-80 flex items-center gap-2">
+              <div className="w-1 h-1 bg-green-500 rounded-full" /> Mission
             </span>
             <p className="text-xl md:text-2xl text-gray-400 font-medium max-w-3xl leading-relaxed">
               All kind of machinery for all kind of purpose with <br className="hidden md:block"/>
@@ -67,7 +67,7 @@ export default function AboutUs() {
             whileHover={{ y: -5 }}
             className="p-8 bg-white/5 border border-white/10 rounded-[32px] backdrop-blur-xl"
           >
-            <Target className="text-blue-500 mb-4" size={32} />
+            <Target className="text-green-500 mb-4" size={32} />
             <h3 className="text-xl font-bold mb-2 uppercase tracking-tighter">Precision</h3>
             <p className="text-gray-500 text-sm leading-relaxed">Millimeter-perfect execution for maximum yield and zero wastage.</p>
           </motion.div>

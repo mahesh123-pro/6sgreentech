@@ -70,7 +70,7 @@ export default function Preloader() {
                     repeat: Infinity,
                     repeatType: "loop"
                   }}
-                  className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-500"
+                  className="absolute inset-0 bg-gradient-to-r from-green-500 to-green-700"
                 />
               </div>
             </motion.div>

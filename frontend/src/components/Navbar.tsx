@@ -36,7 +36,7 @@ export default function Navbar() {
               <span className="text-white font-black text-2xl tracking-tighter uppercase leading-tight">
                 6S <span className="text-green-500">GREENTECH</span>
               </span>
-              <span className="text-blue-400 text-[9px] font-black tracking-[0.4em] uppercase opacity-70">Agricultural Innovation</span>
+              <span className="text-green-500 text-[9px] font-black tracking-[0.4em] uppercase opacity-70">Agricultural Innovation</span>
             </div>
           </Link>
 
@@ -89,7 +89,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   return (
     <Link href={href} className="relative group/link text-gray-400 font-bold hover:text-white transition-colors py-2 px-3 text-[10px] uppercase tracking-[0.2em]">
       {children}
-      <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-green-500 to-blue-500 transition-all duration-300 group-hover/link:w-full"></span>
+      <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-green-500 to-green-300 transition-all duration-300 group-hover/link:w-full"></span>
     </Link>
   );
 }
@@ -98,7 +98,7 @@ function MobileNavLink({ href, children, onClick }: { href: string; children: Re
     <Link 
       href={href} 
       onClick={onClick}
-      className="text-gray-300 font-black text-2xl tracking-tighter uppercase hover:text-blue-400 transition-colors"
+      className="text-gray-300 font-black text-2xl tracking-tighter uppercase hover:text-green-500 transition-colors"
     >
       {children}
     </Link>

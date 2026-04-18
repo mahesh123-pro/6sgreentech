@@ -90,8 +90,8 @@ export default function MachineryListing() {
                 {/* Content */}
                 <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
                   <div className="flex items-center gap-2 mb-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-                    <span className="text-[10px] font-black tracking-[0.3em] text-blue-400 uppercase">{machine.category}</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                    <span className="text-[10px] font-black tracking-[0.3em] text-green-400 uppercase">{machine.category}</span>
                   </div>
                   <h3 className="text-3xl font-black italic tracking-tighter text-white uppercase mb-2 leading-none">
                     {machine.name}

@@ -48,7 +48,7 @@ export default function TechnologyPage() {
         title="Micro-Precision Sensors"
         desc="At the heart of every machine lies a dense network of glowing data nodes. Scanning foliage health, moisture latency, and nitrogen levels cell by cell, we guarantee every drop of water and inch of fertilizer is perfectly deployed."
         imageSrc="/images/WhatsApp Image 2026-04-09 at 11.50.46 AM (2).jpeg"
-        icon={<Satellite size={40} className="text-blue-400" />}
+        icon={<Satellite size={40} className="text-green-500" />}
         align="right"
       />
 
@@ -57,7 +57,7 @@ export default function TechnologyPage() {
         title="Aerial Fleet Coordination"
         desc="A symphony in the sky. Swarms of intelligent drones fly in seamless formation to execute aerial seeding, hyper-targeted spraying, and thermal topology scans, streaming 8k agricultural data directly to your dashboard."
         imageSrc="/images/futuristic_drone_hero.png"
-        icon={<ShieldCheck size={40} className="text-yellow-400" />}
+        icon={<ShieldCheck size={40} className="text-green-500" />}
         align="left"
       />
 
@@ -66,7 +66,7 @@ export default function TechnologyPage() {
         title="Total Ecosystem Harmony"
         desc="High-yield farming no longer costs the earth. By pairing fully electric powertrains with our precision ecosystem, we dramatically slash carbon output, paving the way for complete agricultural sustainability."
         imageSrc="/images/WhatsApp Image 2026-04-09 at 11.50.47 AM (1).jpeg"
-        icon={<Wind size={40} className="text-teal-400" />}
+        icon={<Wind size={40} className="text-green-500" />}
         align="right"
       />
 
