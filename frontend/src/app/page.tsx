@@ -202,37 +202,36 @@ export default function Home() {
                    {/* Tech HUD Information */}
                    <div className="absolute bottom-0 left-0 w-full z-30 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                       <div className="p-8 pb-10 flex flex-col gap-1">
-                         <div className="flex items-center gap-3 mb-2">
+                         <div className="flex items-center gap-3 mb-1">
                             <motion.div 
                               animate={{ opacity: [0.4, 1, 0.4] }} 
                               transition={{ duration: 2, repeat: Infinity }}
-                              className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.8)]" 
+                              className="w-1 h-1 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.8)]" 
                             />
-                            <span className="text-[10px] font-mono text-green-500/80 tracking-[0.3em] font-black uppercase">SYS_LOG: 6SG/{idx + 100}</span>
+                            <span className="text-[8px] font-mono text-green-500/60 tracking-[0.4em] font-black uppercase">REF_ID: 6SG/{idx + 100}</span>
                          </div>
-                         <h3 className="text-2xl md:text-3xl font-black italic tracking-tighter text-white uppercase leading-none drop-shadow-2xl">
+                         <h3 className="text-sm md:text-base font-black tracking-[0.1em] text-white uppercase leading-tight drop-shadow-2xl mb-2">
                            {item.name}
                          </h3>
                          
-                         {/* Hidden stats revealed on hover */}
-                         <div className="mt-4 flex gap-4 items-center opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-4 group-hover:translate-y-0">
-                            <div className="flex flex-col">
-                               <span className="text-[8px] text-gray-500 uppercase font-bold tracking-widest">Status</span>
-                               <span className="text-[10px] text-green-500 font-bold uppercase">Operational</span>
+                         {/* Minimal status revealed on hover */}
+                         <div className="flex gap-4 items-center opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-2 group-hover:translate-y-0">
+                            <div className="flex items-center gap-2">
+                               <span className="text-[7px] text-gray-500 uppercase font-black tracking-[0.2em]">Efficiency</span>
+                               <span className="text-[8px] text-green-500 font-black">98.2%</span>
                             </div>
-                            <div className="w-[1px] h-6 bg-white/10" />
-                            <div className="flex flex-col">
-                               <span className="text-[8px] text-gray-500 uppercase font-bold tracking-widest">Efficiency</span>
-                               <span className="text-[10px] text-white font-bold uppercase">98.2%</span>
+                            <div className="w-[1px] h-3 bg-white/10" />
+                            <div className="flex items-center gap-2">
+                               <span className="text-[7px] text-gray-500 uppercase font-black tracking-[0.2em]">Status</span>
+                               <span className="text-[8px] text-white font-black">OPR_ACTIVE</span>
                             </div>
-                            <MoveRight size={18} className="text-green-500 ml-auto group-hover:translate-x-2 transition-transform duration-500" />
                          </div>
                       </div>
                    </div>
 
                    {/* Background Scanning Line Effect */}
                    <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-1000 overflow-hidden">
-                      <div className="w-full h-[1px] bg-green-500/30 absolute shadow-[0_0_15px_rgba(34,197,94,0.5)] animate-scan" style={{ animationDuration: '3s' }} />
+                      <div className="w-full h-[0.5px] bg-green-500/20 absolute shadow-[0_0_10px_rgba(34,197,94,0.3)] animate-scan" style={{ animationDuration: '4s' }} />
                    </div>
                  </motion.div>
                </Link>
