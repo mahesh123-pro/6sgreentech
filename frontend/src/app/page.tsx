@@ -186,7 +186,7 @@ export default function Home() {
 
                    {/* Image Stage */}
                     <div className="absolute inset-0 bg-[#080808] group-hover:bg-[#0c0c0c] transition-colors duration-500" />
-                    <div className="relative w-full h-full p-12 lg:p-16">
+                    <div className="relative w-full h-full p-4 lg:p-8">
                       <div className="relative w-full h-full">
                         <Image 
                           src={`/images/${item.img}`}
