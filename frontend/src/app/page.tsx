@@ -199,9 +199,12 @@ export default function Home() {
                       <div className="absolute inset-0 opacity-10 pointer-events-none bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:30px_30px]" />
                     </div>
 
-                   {/* Tech HUD Information */}
+                   {/* Tech HUD Information - Enhanced for readability */}
                    <div className="absolute bottom-0 left-0 w-full z-30 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                      <div className="p-8 pb-10 flex flex-col gap-1">
+                      {/* Heavy gradient for text safety */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent h-[150%] -bottom-0 pointer-events-none" />
+                      
+                      <div className="relative p-8 pb-10 flex flex-col gap-1">
                          <div className="flex items-center gap-3 mb-1">
                             <motion.div 
                               animate={{ opacity: [0.4, 1, 0.4] }} 
