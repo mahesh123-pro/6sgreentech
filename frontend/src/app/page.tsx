@@ -154,20 +154,20 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto h-auto">
-              {[
+               {[
                 { id: '1', name: "Garden Shredder / Power Chaff Cutter", img: "WhatsApp Image 2026-04-06 at 9.56.24 PM.jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '2', name: "Shredder cum pulverizer", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg", span: "md:col-span-2 md:row-span-2" },
-                { id: '3', name: "Multi-Crop Thresher Elite", img: "WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg", span: "md:col-span-2 md:row-span-1" },
-                { id: '4', name: "Maize Sheller Pro", img: "Maize sheller.jpeg", span: "md:col-span-1 md:row-span-1" },
-                { id: '5', name: "Reversible Hydraulic Plough", img: "Reversible hydraulic plough.jpeg", span: "md:col-span-1 md:row-span-1" },
-                { id: '6', name: "Industrial Chaff Cutter", img: "WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg", span: "md:col-span-2 md:row-span-1" },
+                { id: '3', name: "Multi-Crop Thresher Elite", img: "WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '4', name: "Maize Sheller Pro", img: "Maize sheller.jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '5', name: "Reversible Hydraulic Plough", img: "Reversible hydraulic plough.jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '6', name: "Industrial Chaff Cutter", img: "WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '7', name: "Multi-Crop Thresher Plus", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg", span: "md:col-span-2 md:row-span-2" },
-                { id: '8', name: "Power Thresher X1", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg", span: "md:col-span-1 md:row-span-1" },
-                { id: '9', name: "Compact Thresher Unit", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg", span: "md:col-span-1 md:row-span-1" },
-                { id: '10', name: "High-Yield Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg", span: "md:col-span-2 md:row-span-1" },
-                { id: '11', name: "Reversible Plough (SC-25)", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM (1).jpeg", span: "md:col-span-1 md:row-span-1" },
-                { id: '12', name: "Hydraulic Plough Max", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM (2).jpeg", span: "md:col-span-1 md:row-span-1" },
-                { id: '13', name: "High capacity multi crop thresher", img: "WhatsApp Image 2026-04-16 at 9.55.05 PM.jpeg", span: "md:col-span-2 md:row-span-1" }
+                { id: '8', name: "Power Thresher X1", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '9', name: "Compact Thresher Unit", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '10', name: "High-Yield Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '11', name: "Reversible Plough (SC-25)", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM (1).jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '12', name: "Hydraulic Plough Max", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM (2).jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '13', name: "High capacity multi crop thresher", img: "WhatsApp Image 2026-04-16 at 9.55.05 PM.jpeg", span: "md:col-span-2 md:row-span-2" }
               ].map((item, idx) => (
                 <Link key={idx} href={`/machines/${item.id}`} className={item.span}>
                   <motion.div 
