@@ -11,14 +11,11 @@ const mockMachines = [
   { _id: '2', name: 'Shredder cum pulverizer', category: 'Harvesters', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg'], specs: { power: '30 HP' } },
   { _id: '3', name: 'Multi-Crop Thresher Elite', category: 'Harvesters', images: ['/images/WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg'], specs: { power: '35 HP' } },
   { _id: '4', name: 'Maize Sheller Pro', category: 'Harvesters', images: ['/images/Maize sheller.jpeg'], specs: { power: '20 HP' } },
-  { _id: '5', name: 'Reversible Hydraulic Plough', category: 'Tractors', images: ['/images/plough_final.jpeg'], specs: { power: '45+ HP' } },
   { _id: '6', name: 'Industrial Chaff Cutter', category: 'Livestock', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg'], specs: { power: '7.5 HP' } },
   { _id: '7', name: 'Multi-Crop Thresher Plus', category: 'Harvesters', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg'], specs: { power: '35 HP' } },
   { _id: '8', name: 'Power Thresher X1', category: 'Harvesters', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg'], specs: { power: '25 HP' } },
   { _id: '9', name: 'Compact Thresher Unit', category: 'Harvesters', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg'], specs: { power: '15 HP' } },
   { _id: '10', name: 'High-Yield Thresher', category: 'Harvesters', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg'], specs: { power: '40 HP' } },
-  { _id: '11', name: 'Reversible Plough (SC-25)', category: 'Tractors', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.45 AM (1).jpeg'], specs: { power: '35 HP' } },
-  { _id: '12', name: 'Hydraulic Plough Max', category: 'Tractors', images: ['/images/WhatsApp Image 2026-04-09 at 11.50.45 AM (2).jpeg'], specs: { power: '50 HP' } },
   { _id: '13', name: 'High capacity multi crop thresher', category: 'Harvesters', images: ['/images/WhatsApp Image 2026-04-16 at 9.55.05 PM.jpeg'], specs: { power: '60 HP' } },
 ];
 

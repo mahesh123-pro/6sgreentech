@@ -37,14 +37,7 @@ const mockMachines: Record<string, any> = {
     images: ['/images/Maize sheller.jpeg'], 
     specs: { power: '20 HP', capacity: '1.5 Tons/hr', mobile: 'Yes' } 
   },
-  '5': { 
-    id: '5', 
-    name: 'Reversible Hydraulic Plough', 
-    category: 'Tractors / Implements', 
-    description: 'Engineered for deep-level soil inversion. The hydraulic reversible mechanism allows for seamless field navigation without the need for manual adjustment, saving time and fuel.', 
-    images: ['/images/plough_final.jpeg'], 
-    specs: { bottoms: '2-3 Furrow', depth: '12-14 inches', hitch: 'Cat II' } 
-  },
+
   '6': { 
     id: '6', 
     name: 'Industrial Chaff Cutter', 

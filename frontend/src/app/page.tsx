@@ -159,14 +159,11 @@ export default function Home() {
                 { id: '2', name: "Shredder cum pulverizer", img: "WhatsApp Image 2026-04-09 at 11.50.43 AM (1).jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '3', name: "Multi-Crop Thresher Elite", img: "WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '4', name: "Maize Sheller Pro", img: "Maize sheller.jpeg", span: "md:col-span-2 md:row-span-2" },
-                { id: '5', name: "Reversible Hydraulic Plough", img: "plough_final.jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '6', name: "Industrial Chaff Cutter", img: "WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '7', name: "Multi-Crop Thresher Plus", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '8', name: "Power Thresher X1", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '9', name: "Compact Thresher Unit", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '10', name: "High-Yield Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg", span: "md:col-span-2 md:row-span-2" },
-                { id: '11', name: "Reversible Plough (SC-25)", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM (1).jpeg", span: "md:col-span-2 md:row-span-2" },
-                { id: '12', name: "Hydraulic Plough Max", img: "WhatsApp Image 2026-04-09 at 11.50.45 AM (2).jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '13', name: "High capacity multi crop thresher", img: "WhatsApp Image 2026-04-16 at 9.55.05 PM.jpeg", span: "md:col-span-2 md:row-span-2" }
               ].map((item, idx) => (
                 <Link key={idx} href={`/machines/${item.id}`} className={item.span}>
@@ -239,46 +236,6 @@ export default function Home() {
                  </motion.div>
                </Link>
               ))}
-          </div>
-      </section>
-
-
-
-
-      {/* 6. ALL IMPLEMENTS */}
-      <section id="all-implements" className="py-32 relative border-y border-white/10 bg-[#0A0A0A]">
-         <div className="max-w-7xl mx-auto px-4 mb-20">
-            <motion.div
-               initial={{ opacity: 0, y: 20 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true }}
-               className="flex flex-col md:flex-row justify-between items-end gap-6"
-            >
-               <div>
-                  <h2 className="text-6xl font-black italic tracking-tighter">ALL <span className="text-green-500">IMPLEMENTS.</span></h2>
-                  <p className="text-gray-400 mt-4 max-w-xl text-lg">Explore our full catalog of next-generation agricultural technology solutions.</p>
-               </div>
-               <Link href="/machines" className="px-8 py-4 bg-green-500 text-black font-black rounded-full hover:bg-white transition-all flex items-center gap-2 group">
-                  EXPLORE CATALOG <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20}/>
-               </Link>
-            </motion.div>
-         </div>
-         
-          <div className="flex flex-col md:flex-row h-auto md:h-[700px] gap-4 px-4 max-w-[100vw] overflow-hidden">
-            {[
-               { title: 'REVERSIBLE PLOUGH', img: '/images/WhatsApp Image 2026-04-09 at 11.50.45 AM.jpeg', cat: 'TRACTORS' },
-               { title: 'MULTICROP THRESHER', img: '/images/WhatsApp Image 2026-04-07 at 6.43.56 PM.jpeg', cat: 'HARVESTERS' }
-            ].map((item, idx) => (
-               <Link key={idx} href={`/machines?category=${item.cat}`} className="relative h-[400px] md:h-full flex-1 md:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group overflow-hidden">
-                  <Image src={item.img} fill className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000" alt={item.title} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-60" />
-                  
-                  <div className="absolute bottom-12 left-12 z-20 w-3/4">
-                     <span className="text-green-500 text-[10px] font-black tracking-[0.5em] mb-2 block uppercase">{item.cat}</span>
-                     <h3 className="text-4xl md:text-5xl lg:text-6xl font-black italic tracking-tighter text-white mb-4 leading-none">{item.title}</h3>
-                  </div>
-               </Link>
-            ))}
           </div>
       </section>
 
