@@ -36,7 +36,7 @@ export default function Navbar() {
               <span className="text-white font-black text-2xl tracking-tighter uppercase leading-tight">
                 6S <span className="text-green-500">GREENTECH</span>
               </span>
-              <span className="text-green-500 text-[9px] font-black tracking-[0.4em] uppercase opacity-70">Agricultural Innovation</span>
+              <span className="text-white text-[9px] font-black tracking-[0.4em] uppercase">Farmers Companion</span>
             </div>
           </Link>
 
