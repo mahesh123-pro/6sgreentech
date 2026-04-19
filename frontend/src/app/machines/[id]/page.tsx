@@ -56,15 +56,15 @@ const mockMachines: Record<string, any> = {
   },
   '8': { 
     id: '8', 
-    name: 'Power Thresher X1', 
+    name: 'MB plough', 
     category: 'Harvesters', 
-    description: 'Compact yet powerful, the X1 is designed for mid-sized farms needing reliable threshing power in tight field conditions.', 
+    description: 'Compact yet powerful, the MB plough is designed for mid-sized farms needing reliable strength in tight field conditions.', 
     images: ['/images/WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg'], 
     specs: { power: '25 HP', crops: 'Bajara, Wheat, Ragi', weight: '850kg' } 
   },
   '9': { 
     id: '9', 
-    name: 'Compact Thresher Unit', 
+    name: '3 HP chaffcutter', 
     category: 'Harvesters', 
     description: 'Specially designed for small-scale farmers, this unit offers the same precision as our industrial models in a highly portable and efficient package.', 
     images: ['/images/WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg'], 
@@ -72,7 +72,7 @@ const mockMachines: Record<string, any> = {
   },
   '10': { 
     id: '10', 
-    name: 'High-Yield Thresher', 
+    name: 'shredder cum pulverizer', 
     category: 'Harvesters', 
     description: 'The High-Yield model is optimized for maximum volume extraction. It features a high-torque engine interface to handle the densest of crop inputs without clogging.', 
     images: ['/images/WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg'], 

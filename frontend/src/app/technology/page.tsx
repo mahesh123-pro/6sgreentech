@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Cpu, Wind, Satellite, ShieldCheck } from "lucide-react";
+import { Cpu, Wind, Satellite, ShieldCheck, ChevronDown, Binary } from "lucide-react";
 
 export default function TechnologyPage() {
   const containerRef = useRef(null);
@@ -43,6 +43,48 @@ export default function TechnologyPage() {
         align="left"
       />
 
+      {/* 2.5 Rotavator Feature (Full Image Request) */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/images/WhatsApp Image 2026-04-09 at 11.50.47 AM (2).jpeg" 
+            alt="Rotavator Technology" 
+            fill 
+            className="object-cover opacity-60 scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]" />
+        </div>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="relative z-10 text-center px-4 max-w-5xl"
+        >
+          <div className="inline-block p-4 bg-green-500/20 rounded-full mb-8 border border-green-500/30 backdrop-blur-xl">
+             <Binary size={48} className="text-green-500" />
+          </div>
+          <h2 className="text-4xl md:text-7xl font-black italic tracking-tighter mb-6 leading-tight">
+            ROTARY <span className="text-green-500">PRECISION.</span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+            Engineered with high-tensile boron steel blades and a hyper-efficient drive system, our rotavators redefine soil preparation through synchronized torque management.
+          </p>
+          <div className="flex justify-center gap-16 text-green-500 font-mono text-xs tracking-[0.2em]">
+             <div className="flex flex-col items-center">
+                <span className="text-2xl md:text-4xl font-black mb-1 italic">100%</span>
+                <span className="opacity-60">DEPTH ACCURACY</span>
+             </div>
+             <div className="flex flex-col items-center">
+                <span className="text-2xl md:text-4xl font-black mb-1 italic">30%</span>
+                <span className="opacity-60">FUEL EFFICIENCY</span>
+             </div>
+          </div>
+        </motion.div>
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+           <ChevronDown className="text-white/20" size={32} />
+        </div>
+      </section>
+
       {/* 3. Feature 2: Precision Ag Sensors */}
       <ParallaxSection 
         title="Micro-Precision Sensors"
@@ -56,7 +98,7 @@ export default function TechnologyPage() {
       <ParallaxSection 
         title="Aerial Fleet Coordination"
         desc="A symphony in the sky. Swarms of intelligent drones fly in seamless formation to execute aerial seeding, hyper-targeted spraying, and thermal topology scans, streaming 8k agricultural data directly to your dashboard."
-        imageSrc="/images/futuristic_drone_hero.png"
+        imageSrc="/images/Aerial Fleet Coordination.jpeg"
         icon={<ShieldCheck size={40} className="text-green-500" />}
         align="left"
       />

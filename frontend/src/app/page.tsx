@@ -161,9 +161,9 @@ export default function Home() {
                 { id: '4', name: "Maize Sheller Pro", img: "Maize sheller.jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '6', name: "Industrial Chaff Cutter", img: "WhatsApp Image 2026-04-09 at 11.50.42 AM.jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '7', name: "Multi-Crop Thresher Plus", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (1).jpeg", span: "md:col-span-2 md:row-span-2" },
-                { id: '8', name: "Power Thresher X1", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg", span: "md:col-span-2 md:row-span-2" },
-                { id: '9', name: "Compact Thresher Unit", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg", span: "md:col-span-2 md:row-span-2" },
-                { id: '10', name: "High-Yield Thresher", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '8', name: "MB plough", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (2).jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '9', name: "3 HP chaffcutter", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM (3).jpeg", span: "md:col-span-2 md:row-span-2" },
+                { id: '10', name: "shredder cum pulverizer", img: "WhatsApp Image 2026-04-09 at 11.50.44 AM.jpeg", span: "md:col-span-2 md:row-span-2" },
                 { id: '13', name: "High capacity multi crop thresher", img: "WhatsApp Image 2026-04-16 at 9.55.05 PM.jpeg", span: "md:col-span-2 md:row-span-2" }
               ].map((item, idx) => (
                 <Link key={idx} href={`/machines/${item.id}`} className={item.span}>
