@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Globe, Share2, MessageSquare, Shield } from 'lucide-react';
+import { Globe, Share2, MessageSquare, Shield, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -34,8 +34,23 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold uppercase tracking-widest text-[10px] mb-6 opacity-50">Connect</h3>
             <div className="flex gap-4">
-              {[Globe, Share2, MessageSquare, Shield].map((Icon, i) => (
-                <a key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-green-600 hover:to-green-400 hover:border-transparent transition-all group">
+              {[
+                { Icon: Globe, href: "#" },
+                { Icon: Share2, href: "#" },
+                { Icon: MessageSquare, href: "#" },
+                { Icon: Shield, href: "#" },
+                { 
+                  Icon: MapPin, 
+                  href: "https://www.google.com/maps/place/13%C2%B036'39.9%22N+77%C2%B031'35.7%22E/@13.6110918,77.5240129,17z/data=!3m1!4b1!4m4!3m3!8m2!3d13.6110918!4d77.5265878?hl=en&entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" 
+                }
+              ].map(({ Icon, href }, i) => (
+                <a 
+                  key={i} 
+                  href={href} 
+                  target={href.startsWith('http') ? "_blank" : undefined}
+                  rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
+                  className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-green-600 hover:to-green-400 hover:border-transparent transition-all group"
+                >
                   <Icon size={20} className="text-gray-400 group-hover:text-white transition-colors" />
                 </a>
               ))}

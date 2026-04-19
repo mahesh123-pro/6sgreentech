@@ -274,15 +274,20 @@ export default function Home() {
                         <p className="text-sm text-gray-500">K. Venu Gopal</p>
                      </div>
                   </div>
-                  <div className="flex items-center gap-6 group">
+                  <a 
+                    href="https://www.google.com/maps/place/13%C2%B036'39.9%22N+77%C2%B031'35.7%22E/@13.6110918,77.5240129,17z/data=!3m1!4b1!4m4!3m3!8m2!3d13.6110918!4d77.5265878?hl=en&entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-6 group"
+                  >
                      <div className="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center group-hover:bg-green-500 group-hover:text-black transition-all shrink-0">
                         <MapPin size={28} />
                      </div>
                      <div>
                         <span className="text-sm text-gray-500 uppercase font-bold tracking-widest">Visit Us</span>
-                        <p className="text-xl font-bold text-wrap break-words max-w-sm">Vinayaka Circle, Bypass Road, Gauribidanur – 561208, Karnataka, India</p>
+                        <p className="text-xl font-bold text-wrap break-words max-w-sm group-hover:text-green-500 transition-colors">Vinayaka Circle, Bypass Road, Gauribidanur – 561208, Karnataka, India</p>
                      </div>
-                  </div>
+                  </a>
                </div>
             </motion.div>
 
